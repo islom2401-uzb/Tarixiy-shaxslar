@@ -96,3 +96,17 @@ body {
         -moz-transform-origin: 0 0;
     }
 }
+
+.back-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px;
+    background-color: #333;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    position: sticky; /* Sahifa pastga tushganda ham tepada turadi */
+    top: 10px;
+    z-index: 1000;
+}
