@@ -88,3 +88,11 @@ body {
     color: white;
 }
 
+@media (max-width: 768px) {
+    html {
+        /* Saytni telefonda ekraniga sig'dirish uchun kichraytiradi */
+        zoom: 0.4; 
+        -moz-transform: scale(0.4);
+        -moz-transform-origin: 0 0;
+    }
+}
