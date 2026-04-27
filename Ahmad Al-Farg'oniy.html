@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad al-Farg'oniy | Koinot Me'mori</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #010204;
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun chuqur koinot va orbita nurlari */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(129, 140, 248, 0.06) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 3px;
+            background: linear-gradient(135deg, #0ea5e9, #818cf8, #0369a1, #0ea5e9);
+            background-size: 300% 300%;
+            animation: flowBG 12s linear infinite;
+            border-radius: 60px 10px 60px 10px;
+            box-shadow: 0 0 100px rgba(14, 165, 233, 0.25);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        @keyframes flowBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: rgba(2, 4, 8, 0.97);
+            backdrop-filter: blur(20px);
+            border-radius: 58px 8px 58px 8px;
+            padding: 90px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transform: translateZ(20px);
+        }
+
+        /* H1 - O'ta silliq va sekin 7 soniyali yaltirab surilish effekti */
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #0369a1 20%, #ffffff 40%, #ffffff 60%, #0369a1 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShine 7s ease-in-out infinite;
+            letter-spacing: -3px;
+            line-height: 1.1;
+        }
+
+        @keyframes textShine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik Asturlob va Orbita belgisi */
+        .astrolabe-icon {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .astrolabe-icon .center-globe {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #0ea5e9, #0369a1);
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+            z-index: 2;
+        }
+
+        .astrolabe-icon .orbit {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #818cf8;
+            border-radius: 50%;
+            animation: rotateOrbit 6s linear infinite;
+        }
+
+        .astrolabe-icon .orbit::before {
+            content: "";
+            position: absolute;
+            top: -5px; left: 50%; width: 10px; height: 10px;
+            background: #fff; border-radius: 50%;
+            box-shadow: 0 0 15px #fff;
+        }
+
+        @keyframes rotateOrbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .astrolabe-icon .measure-line {
+            position: absolute;
+            width: 2px;
+            height: 140px;
+            background: linear-gradient(to bottom, transparent, #fff, transparent);
+            transform: rotate(45deg);
+            animation: pulseLine 4s ease-in-out infinite;
+        }
+
+        @keyframes pulseLine {
+            0%, 100% { opacity: 0.3; transform: rotate(45deg) scaleY(1); }
+            50% { opacity: 1; transform: rotate(45deg) scaleY(1.1); }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid rgba(14, 165, 233, 0.15);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.08) translateY(-10px);
+            border-color: #ffffff;
+            background: rgba(14, 165, 233, 0.05);
+        }
+
+        .stat-item::after {
+            content: "";
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .stat-item:hover::after { opacity: 1; }
+
+        .stat-item span {
+            color: #0ea5e9;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #0ea5e9;
+            text-align: left;
+            margin: 60px 0 30px;
+            border-left: 10px solid #818cf8;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .content-text {
+            font-size: 1.3rem;
+            line-height: 2.3;
+            color: #cbd5e1;
+            text-align: justify;
+            font-weight: 300;
+            margin-bottom: 35px;
+        }
+
+        .highlight { color: #fff; font-weight: 500; }
+
+        .algorithm-box {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(129, 140, 248, 0.1));
+            border-radius: 30px;
+            padding: 40px;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #f1f5f9;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .algorithm-box::before {
+            content: "“";
+            position: absolute;
+            top: 10px; left: 20px;
+            font-size: 5rem; color: #818cf8; opacity: 0.3;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #0ea5e9, #818cf8, #0ea5e9, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="inner-box">
+        <h1>Ahmad al-Farg'oniy</h1>
+
+        <div class="astrolabe-icon">
+            <div class="center-globe"></div>
+            <div class="orbit"></div>
+            <div class="measure-line"></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item"><span>Tavalludi</span>798-yil, Farg'ona</div>
+            <div class="stat-item"><span>Vafoti</span>861-yil, Qohira</div>
+            <div class="stat-item"><span>Merosi</span>Astronomiya asoslari</div>
+        </div>
+
+        <p class="content-text">
+            Insoniyat tafakkuri va osmon mexanikasining buyuk mutafakkiri, zamonaviy astronomiya poydevorining asoschilaridan biri <span class="highlight">Ahmad ibn Muhammad ibn Kasir al-Farg'oniy</span> 798-yilda Farg'ona vodiysida dunyoga kelgan. U kishining ilmiy salohiyati shunchalik yuksak ediki, G'arb dunyosida u <span class="highlight">Alfraganus</span> nomi bilan afsonaga aylandi. Al-Farg'oniy Bag'doddagi "Baytul-hikma" (Donishmandlar uyi) ning eng yetuk olimlaridan biri bo'lib, koinot tartiboti, Yer o'lchami va yulduzlar harakatini aniqlashda o'z davrining eng aniq va mukammal hisob-kitoblarini yaratdi. Uning hayoti va faoliyati ilmga mislsiz sadoqat va osmon sir-asrorlarini mantiqiy anglashga bag'ishlangan haqiqiy fidoyilik namunasidir.
+        </p>
+
+        <div class="algorithm-box">
+            Al-Farg'oniyning hisob-kitoblari Xristofor Kolumbning dunyo bo'ylab sayohati davomida Yer xaritasini tushunishda asosiy ilmiy manba bo'lib xizmat qilgan.
+        </div>
+
+        <h2>Osmon Mexanikasi va "Astronomiya Asoslari"</h2>
+        <p class="content-text">
+            Al-Farg'oniyning ilm-fan oldidagi eng buyuk xizmati — uning <strong>"Kitob al-Harakat al-Samawiyya va Jawami' Ilm an-Nujum"</strong> (Osmon harakatlari va yulduzlar ilmi to'plami) asaridir. Bu asar o'rta asrlarda astronomiya fani bo'yicha eng mukammal darslik hisoblanib, XII asrdayoq lotin tiliga tarjima qilingan va Yevropa universitetlarida asrlar davomida asosiy qo'llanma bo'lib kelgan. Olim asarda osmon sferalari, o'n ikkita burj, sayyoralarning harakati va ularning Yerga nisbatan uzoqligini aniq matematik hisob-kitoblar bilan tushuntirib berdi. Uning Yer meridianining bir darajasi uzunligini o'lchashdagi aniqligi zamonaviy gidrologiya va geodeziya fanlarining rivojlanishiga ham ulkan hissa qo'shdi.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Nilometr va Mangu Meros</h2>
+        <p class="content-text">
+            Olimning tafakkuri faqat nazariy astronomiya bilan cheklanmagan. U kishining muhandislik salohiyati Misrda, Nil daryosi suv sathini o'lchovchi mashhur <strong>Nilometr</strong> asbobini yaratishda namoyon bo'ldi. Al-Farg'oniy taklif etgan suv sathini aniq o'lchash usuli daryo gidrologiyasida inqilob qildi va bugungi kunda ham dunyo gidrologiyasida u kishining metodlari qo'llaniladi. 1998-yilda UNESCO hamkorligida Ahmad al-Farg'oniyning 1200-yilligi keng nishonlanishi, Oydagi kraterlardan biriga "Alfraganus" nomi berilishi u kishining jahon sivilizatsiyasiga qo'shgan beqiyos hissasining mangu tasdig'idir. Alloma 861-yilda vafot etgan bo'lsa-da, u barpo etgan aniq hisob-kitob va osmon mexanikasi maktabi insoniyatning koinotni anglash yo'lidagi intilishlariga mangu nur sochib turadi.
+        </p>
+
+        <p style="text-align: center; color: #818cf8; font-weight: 800; font-size: 1.6rem; letter-spacing: 5px; margin-top: 50px;">
+            KOINOT ME'MORI — MA'RIFAT YULDUZI
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

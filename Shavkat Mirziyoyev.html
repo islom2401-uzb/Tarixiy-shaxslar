@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shavkat Mirziyoyev | Yangi O‘zbekiston</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;500;900&family=Plus+Jakarta+Sans:wght@200;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at center, #0a192f 0%, #020617 100%);
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun davlat ramzlari va moviy osmon jilolari */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 5% 5%, rgba(0, 153, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 95% 95%, rgba(20, 184, 166, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 3px;
+            background: linear-gradient(135deg, #0099ff, #10b981, #0a192f, #0099ff);
+            background-size: 300% 300%;
+            animation: moveGradient 12s linear infinite;
+            border-radius: 40px;
+            box-shadow: 0 0 100px rgba(0, 153, 255, 0.2);
+        }
+
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: rgba(2, 6, 23, 0.98);
+            border-radius: 37px;
+            padding: 85px;
+            text-align: center;
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* H1 - 7 soniyali kinematik nurli yaltirash */
+        h1 {
+            font-size: 4.8rem;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #003366 20%, #ffffff 40%, #ffffff 60%, #003366 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShine 7s ease-in-out infinite;
+            letter-spacing: -3px;
+            line-height: 1.1;
+        }
+
+        @keyframes textShine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik Humo Qushi va Orbita Belgisi */
+        .humo-icon {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .humo-wings {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            border-top: 4px solid #10b981;
+            border-radius: 50% 50% 0 0;
+            animation: flyWings 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes flyWings {
+            from { transform: translateY(0) rotate(2deg); opacity: 0.5; }
+            to { transform: translateY(-20px) rotate(-2deg); opacity: 1; box-shadow: 0 -10px 30px #10b981; }
+        }
+
+        .globe-core {
+            width: 30px;
+            height: 30px;
+            background: #0099ff;
+            border-radius: 50%;
+            box-shadow: 0 0 40px #0099ff;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(0, 153, 255, 0.2);
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-15px);
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .stat-card span {
+            display: block;
+            font-size: 0.7rem;
+            color: #0099ff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #0099ff;
+            text-align: left;
+            margin: 60px 0 30px;
+            border-left: 10px solid #10b981;
+            padding-left: 25px;
+            font-family: 'Unbounded', sans-serif;
+        }
+
+        .text-content {
+            font-size: 1.35rem;
+            line-height: 2.3;
+            color: #cbd5e1;
+            text-align: justify;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+
+        .quote-box {
+            background: linear-gradient(90deg, rgba(0, 153, 255, 0.08), transparent);
+            padding: 40px;
+            border-radius: 20px;
+            border-right: 4px solid #0099ff;
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #f1f5f9;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #0099ff, #10b981, #0099ff, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="inner-box">
+        <h1>Shavkat Mirziyoyev</h1>
+
+        <div class="humo-icon">
+            <div class="humo-wings"></div>
+            <div class="globe-core"></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card"><span>Tavalludi</span>1957-yil, Jizzax</div>
+            <div class="stat-card"><span>Shiori</span>Xalq davlat idoralariga emas...</div>
+            <div class="stat-card"><span>Strategiya</span>Yangi O‘zbekiston</div>
+        </div>
+
+        <p class="text-content">
+            O‘zbekiston Respublikasining Prezidenti <strong>Shavkat Miromonovich Mirziyoyev</strong> 1957-yil 24-iyulda Jizzax viloyatining Zomin tumanida tug‘ilgan. 2016-yildan buyon mamlakat rahbari sifatida faoliyat yuritib kelayotgan Sh. Mirziyoyev O‘zbekistonning ichki va tashqi siyosatida "tub burilish yasagan yetakchi" sifatida e’tirof etiladi. Uning rahbarligidagi asosiy tamoyil — davlat idoralarining xalqqa xizmat qilishi, inson huquqlari va erkinliklarini ta’minlash hamda ochiq iqtisodiy tizimni barpo etishdir.
+        </p>
+
+        <div class="quote-box">
+            "Xalq davlat idoralariga emas, davlat idoralari xalqimizga xizmat qilishi kerak."
+        </div>
+
+        <h2>Yangi O‘zbekiston: Taraqqiyot Strategiyasi</h2>
+        <p class="text-content">
+            Shavkat Mirziyoyev tashabbusi bilan qabul qilingan <strong>"Harakatlar strategiyasi"</strong> va keyinchalik <strong>"Taraqqiyot strategiyasi"</strong> mamlakatni modernizatsiya qilishning asosiy yo‘nalishlarini belgilab berdi. Islohotlar natijasida valyuta bozori erkinlashtirildi, qo‘shni davlatlar bilan "muzlagan" munosabatlar iliqlashdi va O‘zbekiston jahon hamjamiyati uchun jozibador investitsiya markaziga aylandi. Ta’lim tizimidagi o‘zgarishlar, oliy ta’lim qamrovining kengayishi va raqamli iqtisodiyotga o‘tilishi uning uzoqni ko‘zlagan siyosatining natijasidir.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Inson Qadri va Xalqaro Nufuz</h2>
+        <p class="text-content">
+            Prezident siyosatining markazida "Inson qadri uchun" g‘oyasi yotadi. Bu tamoyil yangilangan Konstitutsiyada ham o‘z aksini topgan bo‘lib, ijtimoiy himoya, xotin-qizlar huquqlari va so‘z erkinligini qo‘llab-quvvatlashga qaratilgan. Xalqaro maydonda Shavkat Mirziyoyev Markaziy Osiyo integratsiyasi va mintaqaviy xavfsizlik masalalarida global tashabbuslarni ilgari surmoqda. Uning sa’y-harakatlari bilan O‘zbekiston nafaqat mintaqaviy yetakchi, balki xalqaro munosabatlarning faol va nufuzli ishtirokchisiga aylandi.
+        </p>
+
+        <p style="text-align: center; color: #10b981; font-weight: 900; font-size: 1.5rem; letter-spacing: 5px; margin-top: 50px;">
+            YUKSALISH — TARAQQIYOT — KELAJAK
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

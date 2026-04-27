@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imom Al-Moturidiy | Aqida Imomi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #041d1a 0%, #010807 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+        }
+
+        /* Fon uchun zumrad va yashil tusli jilolar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 5% 5%, rgba(16, 185, 129, 0.07) 0%, transparent 40%),
+                radial-gradient(circle at 95% 95%, rgba(20, 184, 166, 0.07) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-card {
+            position: relative;
+            width: 90%;
+            max-width: 950px;
+            padding: 4px;
+            background: linear-gradient(135deg, #065f46, #d4af37, #0f172a, #065f46);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+            border-radius: 50px;
+            box-shadow: 0 0 80px rgba(6, 95, 70, 0.3);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: #020c0b;
+            border-radius: 46px;
+            padding: 70px;
+            text-align: center;
+        }
+
+        /* H1 - Silliq va sekin 7 soniyali yaltirash */
+        h1 {
+            font-size: 4.3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #064e3b 20%, #ffffff 40%, #ffffff 60%, #064e3b 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: lightSweep 7s ease-in-out infinite;
+        }
+
+        @keyframes lightSweep {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Salobatli Ilm Iconi (Ochiq kitob ramzi) */
+        .majestic-icon {
+            font-size: 90px;
+            margin: 15px auto 40px;
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #fff, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+            animation: iconPulse 6s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: translateY(0); opacity: 0.7; }
+            50% { transform: translateY(-15px); opacity: 1; }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            transition: 0.4s;
+        }
+
+        .info-card:hover {
+            border-color: #d4af37;
+            background: rgba(16, 185, 129, 0.05);
+            transform: scale(1.03);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #10b981;
+            margin: 50px 0 25px;
+            text-align: left;
+            border-left: 6px solid #d4af37;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 2.2;
+            color: #d1d5db;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #065f46, #d4af37, #065f46, transparent);
+            margin: 50px 0;
+            opacity: 0.4;
+        }
+
+        .highlight-text {
+            color: #d4af37;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="inner-box">
+        <h1>Imom Al-Moturidiy</h1>
+        
+        <div class="majestic-icon">📖</div>
+
+        <div class="info-grid">
+            <div class="info-card"><span>To'liq ismi</span>Abu Mansur al-Moturidiy</div>
+            <div class="info-card"><span>Tavalludi</span>870-yil, Samarqand</div>
+            <div class="info-card"><span>Vafoti</span>944-yil, Samarqand</div>
+        </div>
+
+        <p>
+            Islom olamining buyuk mutafakkiri, kalom ilmining asoschilaridan biri va "Imomul-hudo" (Hidoyat yo'li imomi) unvoni sohibi <span class="highlight-text">Abu Mansur Muhammad ibn Muhammad al-Moturidiy</span> taxminan 870-yilda Samarqand yaqinidagi Moturid qishlog'ida dunyoga kelgan. U o'z davrining eng nufuzli ilm dargohlarida tahsil olib, islom aqidasi va huquqshunosligi sohasida tengsiz bilim egasiga aylandi. Imom al-Moturidiy yashagan davr turli falsafiy oqimlar va aqidaviy ixtiloflar kuchaygan vaqtga to'g'ri kelgan bo'lib, u kishi islom dinining asl mohiyatini aql va naql (vahy) uyg'unligida himoya qilib chiqqan buyuk himoyachi hisoblanadi.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Aqida va Kalom Ilmi</h2>
+        <p>
+            Imom al-Moturidiyning islom dunyosidagi eng buyuk xizmati — moturidiylik aqidaviy maktabining barpo etilishidir. U kishi o'zining mashhur <strong>"Kitobut-tavhid"</strong> asarida islomning asosiy prinsiplarini mantiqiy dalillar bilan isbotlab berdi. Moturidiy ta'limotiga ko'ra, inson aqli Allohni tanishda muhim vosita hisoblanadi. U kishi mo''tadillik yo'lini tutib, diniy matnlarni chuqur tahlil qildi va "Ahli sunna val jamoa" aqidasining shakllanishiga ulkan hissa qo'shdi. Shuningdek, uning <strong>"Ta'vilotul Qur'on"</strong> asari tafsir ilmining durdonalaridan biri bo'lib, oyatlarning ma'naviy va falsafiy jihatlarini ochib berishda hanuzgacha asosiy manba bo'lib xizmat qilmoqda.
+        </p>
+
+        <h2>Samarqand Fayzi va Boqiy Meros</h2>
+        <p>
+            Imom al-Moturidiy umrining oxirigacha Samarqandda yashab, dars berdi va ko'plab shogirdlar yetishtirdi. 944-yilda vafot etgan buyuk alloma Samarqanddagi Chokardiza qabristoniga dafn etilgan. Mustaqil O'zbekiston yillarida Imom al-Moturidiy nomi qayta tiklanib, u kishining 1130-yillik yubileyi xalqaro miqyosda nishonlandi. U zotning qabri ustida mahobatli maqbara barpo etildi va bugun bu joy dunyoning turli chekkalaridan keluvchi ziyoratchilar bilan gavjum. Allomaning ilmiy merosi bugun ham dolzarb bo'lib, diniy bag'rikenglik, insonparvarlik va yuksak ma'naviyatni targ'ib qilishda muhim ahamiyatga ega. Uning ta'limoti asrlar davomida Movarounnahr va butun islom olamida tinchlik hamda mo''tadillik garovi bo'lib kelmoqda.
+        </p>
+
+        <p style="text-align: center; color: #10b981; font-weight: bold; font-size: 1.4rem; letter-spacing: 2px;">
+            Aql va Hikmat Imomi — Mangu Nur
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

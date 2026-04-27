@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobir Rahimov | Temir General</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600;700&family=Roboto+Condensed:wght@300;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Roboto Condensed', sans-serif;
+            background: radial-gradient(circle at center, #1a1c1e 0%, #050505 100%);
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun harbiy-strategik muhit va metall jilolari */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(100, 116, 139, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(185, 28, 28, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-container {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 4px;
+            background: linear-gradient(135deg, #334155, #b91c1c, #0f172a, #334155);
+            background-size: 300% 300%;
+            animation: borderMotion 12s linear infinite;
+            border-radius: 20px;
+            box-shadow: 0 0 100px rgba(185, 28, 28, 0.2);
+        }
+
+        @keyframes borderMotion {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: rgba(10, 12, 16, 0.98);
+            border-radius: 17px;
+            padding: 85px;
+            text-align: center;
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* H1 - 7 soniyali kinematik metall yaltirash */
+        h1 {
+            font-size: 5rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #1e293b 20%, #f8fafc 40%, #f8fafc 60%, #1e293b 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: steelGlow 7s ease-in-out infinite;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @keyframes steelGlow {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik General Yulduzi Belgisi */
+        .general-star {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .star-shape {
+            width: 60px;
+            height: 60px;
+            background: #b91c1c;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: pulseStar 3s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(185, 28, 28, 0.8);
+        }
+
+        .orbit-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #64748b;
+            border-radius: 50%;
+            border-left-color: transparent;
+            animation: rotateOrbit 5s linear infinite;
+        }
+
+        @keyframes rotateOrbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseStar {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.15); filter: brightness(1.5); }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(185, 28, 28, 0.2);
+            transition: 0.4s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            border-color: #b91c1c;
+            background: rgba(185, 28, 28, 0.05);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #b91c1c;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #b91c1c;
+            text-align: left;
+            margin: 60px 0 30px;
+            border-left: 8px solid #64748b;
+            padding-left: 20px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .content-text {
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: #94a3b8;
+            text-align: justify;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .honor-box {
+            background: linear-gradient(90deg, rgba(185, 28, 28, 0.1), transparent);
+            padding: 40px;
+            border-radius: 10px;
+            border-right: 4px solid #b91c1c;
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #f1f5f9;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #b91c1c, #64748b, #b91c1c, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="inner-box">
+        <h1>Sobir Rahimov</h1>
+
+        <div class="general-star">
+            <div class="orbit-ring"></div>
+            <div class="star-shape"></div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card"><span>Tavalludi</span>1902-yil, Toshkent</div>
+            <div class="info-card"><span>Vafoti</span>1945-yil, Qdansk</div>
+            <div class="info-card"><span>Mukofoti</span>Oltin Yulduz Qahramoni</div>
+        </div>
+
+        <p class="content-text">
+            O‘zbek xalqining mardlik va harbiy mahorat timsoli, Gvardiya general-mayori <strong>Sobir Rahimov</strong> 1902-yilda Toshkent shahrida tavallud topgan. U o‘z harbiy faoliyatini oddiy askarlikdan boshlab, o‘zining qat’iyati va strategik tafakkuri tufayli yuksak qo‘mondonlik darajasiga ko‘tarilgan birinchi o‘zbek generalidir. Ikkinchi jahon urushi yillarida u dushmanga qarshi janglarda ko‘rsatgan beqiyos jasorati va tank qo‘shinlariga qarshi qo‘llagan taktikasi uchun dushman generallari tomonidan ham yuksak e’tirof etilgan.
+        </p>
+
+        <div class="honor-box">
+            "Sobir Rahimov — strategik manevrlar ustasi va askarlarining qalbiga yo‘l topa olgan chinakam xalq qahramonidir."
+        </div>
+
+        <h2>Jang Maydonlaridagi G‘alabalar</h2>
+        <p class="content-text">
+            General Rahimov qo‘mondonlik qilgan 37-gvardiyachi o‘qchi diviziya urushning eng og‘ir nuqtalarida, xususan, Stalinqrad jangi va Belarusni ozod qilish operatsiyalarida ishtirok etgan. U o‘z askarlari bilan birga har doim oldingi saflarda bo‘lgan va har qanday murakkab vaziyatda ham dushmanni chekintirishga muvaffaq bo‘lgan. Uning qo‘mondonlik mahorati sababli dushman divalari uni "Temir general" deb atashgan, chunki uning hujumlariga qarshi turish imkonsiz edi.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Mangu Jasorat va Vatan Sadoqati</h2>
+        <p class="content-text">
+            Sobir Rahimov 1945-yil 26-martda Polshaning Qdansk shahri yaqinidagi jangda qahramonlarcha halok bo‘ldi. Urush tugashiga sanoqli kunlar qolganda vafot etgan bu buyuk sarkarda vafotidan so‘ng "Sovet Ittifoqi Qahramoni" unvoni bilan taqdirlandi. Uning jasadi o‘zi tug‘ilib o‘sgan Toshkent shahriga keltirilib, ehtirom bilan dafn etilgan. Bugungi kunda Sobir Rahimov nomi O‘zbekiston armiyasi va yosh askarlar uchun mardlik, vatanparvarlik va yengilmas iroda ramzi bo'lib xizmat qilmoqda.
+        </p>
+
+        <p style="text-align: center; color: #b91c1c; font-weight: 700; font-size: 1.5rem; letter-spacing: 5px; margin-top: 50px;">
+            VATAN QALQONI — TEMIR GENERAL
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

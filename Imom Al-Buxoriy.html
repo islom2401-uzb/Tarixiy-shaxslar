@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imom Al-Buxoriy | Buyuk Muhaddis</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #062c2d 0%, #020f10 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+            overflow-x: hidden;
+        }
+
+        /* Fon uchun zumrad va oltin rang jilolari */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Asosiy karta - Zumrad va Oltin gradientli jilo */
+        .main-card {
+            position: relative;
+            width: 90%;
+            max-width: 950px;
+            padding: 4px;
+            background: linear-gradient(135deg, #10b981, #d4af37, #065f46, #10b981);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+            border-radius: 40px;
+            box-shadow: 0 0 70px rgba(16, 185, 129, 0.2);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: #041a1b;
+            border-radius: 36px;
+            padding: 60px;
+        }
+
+        /* H1 - Siz xohlagandek o'ta silliq va sekin suriluvchi nur */
+        h1 {
+            font-size: 4.2rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(to right, #065f46 20%, #fff 40%, #fff 60%, #065f46 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: lightSweep 7s ease-in-out infinite;
+        }
+
+        @keyframes lightSweep {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #10b981;
+            margin: 45px 0 20px;
+            border-left: 5px solid #d4af37;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 2.1;
+            color: #cbd5e1;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .quote-block {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.08), transparent);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 3px solid #d4af37;
+            font-style: italic;
+            font-size: 1.3rem;
+            margin: 40px 0;
+            color: #f1f5f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="inner-box">
+        <h1>Imom Al-Buxoriy</h1>
+
+        <div class="info-grid">
+            <div class="info-card"><span>To'liq ismi</span>Muhammad ibn Ismoil</div>
+            <div class="info-card"><span>Tug‘ilgan</span>810-yil, Buxoro</div>
+            <div class="info-card"><span>Vafoti</span>870-yil, Samarqand</div>
+            <div class="info-card"><span>Unvoni</span>Sultonul Muhaddisin</div>
+        </div>
+
+        <p>
+            Islom olamining eng buyuk siymolaridan biri, hadis ilmining sultoni <strong>Imom Al-Buxoriy</strong> (to'liq ismi Muhammad ibn Ismoil ibn Ibrohim al-Buxoriy) milodiy 810-yilda Buxoro shahrida tavallud topgan. U yoshligidanoq o'tkir zehni va quvvai hofizasi bilan atrofdagilarni hayratga solgan. O'n yoshidan hadislarni o'rganishga kirishgan yosh Muhammad, qisqa vaqt ichida o'z davrining yetuk olimlari e'tirofini qozongan. U ilm izlab Islom dunyosining eng yirik markazlari — Makka, Madina, Bag'dod, Misr va Shom kabi o'lkalarda ko'p yillar davomida safarda bo'lgan.
+        </p>
+
+        <div class="quote-block">
+            "Har qanday amal niyatga bog'liqdir va har bir kishi niyat qilgan narsasiga erishadi."
+        </div>
+
+        <h2>Ilmiy Meros va "Sahihul Buxoriy"</h2>
+        <p>
+            Imom Buxoriyning islom olamidagi eng buyuk xizmati — bu <strong>"Al-Jome' as-Sahih"</strong> asarining yaratilishidir. Ushbu ulkan asar olti yuz mingga yaqin hadis orasidan eng ishonchli (sahih) deb topilganlarini jamlagan bo'lib, Islom dinida Qur'oni Karimdan keyingi ikkinchi muqaddas manba deb tan olingan. Olim har bir hadisni kitobga kiritishdan oldin g'usl qilib, ikki rakaat namoz o'qiganligi uning o'z ishiga qanchalik mas'uliyat bilan yondashganidan dalolat beradi. Uning ilmiy merosi faqatgina hadis bilan cheklanmay, tafsir, tarix va axloqqa oid o'ndan ortiq qimmatli asarlarni o'z ichiga oladi.
+        </p>
+
+        <h2>Boqiy Xotira</h2>
+        <p>
+            Buyuk muhaddis umrining so'nggi yillarini ona yurti Buxoro va Samarqand yaqinidagi Hartang qishlog'ida o'tkazdi. Milodiy 870-yilda vafot etgan olimning qabri bugungi kunda dunyo musulmonlarining eng qutlug' ziyoratgohlaridan biriga aylangan. O'zbekiston mustaqillikka erishgach, davlatimiz rahbarlari tashabbusi bilan Samarqand yaqinida Imom Buxoriyning muhtasham yodgorlik majmuasi barpo etildi. Bugun bu yerda xalqaro ilmiy-tadqiqot markazi faoliyat yuritmoqda. Imom Buxoriyning ma'naviy merosi nafaqat bizning ajdodimiz sifatidagi iftixorimiz, balki butun jahon sivilizatsiyasi uchun bebaho xazina bo'lib xizmat qilmoqda. Uning "Ilmdan boshqa najot yo'q" degan da'vati bugungi kun yoshlari uchun ham hayotiy mayoq vazifasini o'taydi.
+        </p>
+
+        <p style="text-align: center; color: #d4af37; font-weight: bold; font-size: 1.5rem; letter-spacing: 1px;">
+            Hadis Ilmining Cho'qqisi — Mangu Ehtirom
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

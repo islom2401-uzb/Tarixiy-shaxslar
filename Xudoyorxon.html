@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --royal-purple: #2d0036;
+            --gold-leaf: #d4af37;
+            --shadow: rgba(0, 0, 0, 0.8);
+        }
+
+        body {
+            margin: 0;
+            background: var(--royal-purple);
+            color: #e0e0e0;
+            font-family: 'Garamond', serif;
+            overflow-x: hidden;
+        }
+
+        /* 1. Pardali ochilish animatsiyasi */
+        .curtain {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #000;
+            z-index: 100;
+            animation: curtainOpen 2.5s ease-in-out forwards;
+        }
+
+        @keyframes curtainOpen {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        /* 2. Suyuq oltin fon */
+        .bg-glow {
+            position: fixed;
+            top: 50%; left: 50%;
+            width: 150vw; height: 150vh;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: pulseGlow 8s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            from { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+            to { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 100px auto;
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* 3. Parchalangan sarlavha effekti */
+        h1 {
+            font-size: 4.5rem;
+            text-align: center;
+            margin: 0;
+            color: var(--gold-leaf);
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            position: relative;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        h1::after {
+            content: "XUDOYORXON";
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            color: rgba(212, 175, 55, 0.2);
+            transform: translate(5px, 5px);
+            z-index: -1;
+        }
+
+        .subtitle {
+            text-align: center;
+            display: block;
+            font-size: 1.1rem;
+            letter-spacing: 8px;
+            color: #bfa36a;
+            margin-bottom: 60px;
+            animation: fadeIn 3s ease-in;
+        }
+
+        /* 4. Ma'lumot bloklari - "Sliding Shadow" */
+        .content-section {
+            background: rgba(0, 0, 0, 0.4);
+            border-right: 1px solid var(--gold-leaf);
+            border-left: 1px solid var(--gold-leaf);
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .content-section:hover {
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+
+        h2 {
+            color: var(--gold-leaf);
+            font-weight: 300;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 2;
+            font-size: 1.2rem;
+            text-align: justify;
+            color: #ccc;
+        }
+
+        b { color: var(--gold-leaf); }
+
+        .decoration {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--gold-leaf);
+            margin: 20px 0;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="curtain"></div>
+<div class="bg-glow"></div>
+
+<div class="container">
+    <h1>XUDOYORXON</h1>
+    <span class="subtitle">Qo'qon xonligining so'nggi hashamati</span>
+
+    <div class="content-section">
+        <h2>Uch karra taxt egasi</h2>
+        <p>
+            <b>Said Muhammad Xudoyorxon</b> (1829–1875) — Qo‘qon xonligining o‘n to‘rtinchi hukmdori. Uning taxt yo‘li misli ko‘rilmagan darajada murakkab kechgan: 1845–1875-yillar oralig‘ida u uch marta taxtga o‘tirgan va uch marta uni tark etishga majbur bo‘lgan. Xudoyorxon davri xonlikning eng boy, ammo siyosiy jihatdan eng zaiflashgan davriga to‘g‘ri keladi. U saroy o‘yinlari va qabilalararo nizolarning markazida turgan fojiaviy shaxsdir.
+        </p>
+    </div>
+
+    <div class="decoration">✧ ⚜ ✧</div>
+
+    <div class="content-section">
+        <h2>O'rda - Toshga aylangan hashamat</h2>
+        <p>
+            Xudoyorxon nomi tilga olinganda, ko‘z oldimizga u barpo etgan muhtasham <b>Xudoyorxon o‘rdasi</b> keladi. 1871-yilda qurib bitkazilgan bu saroy Sharq me’morchiligining eng so‘nggi yirik yodgorliklaridan biridir. 119 ta xonadan iborat bo‘lgan saroy o‘zining koshinlari, oltin hallari va nafis o‘ymakorligi bilan xonlikning so‘nggi qudratini namoyish etgan. Bu imorat xuddi xonning o‘zi kabi ham haybatli, ham omonat edi.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Siyosiy inqiroz va Surgun</h2>
+        <p>
+            Uning hukmronligi davrida Rossiya imperiyasining Turkistonga yurishi boshlandi. Xudoyorxon murakkab diplomatik tanlovlar qarshisida qoldi. 1875-yilda qo‘zg‘olon natijasida taxtdan butunlay ayrilib, rus qo‘shinlari himoyasida qochishga majbur bo‘ldi. U o‘z umrini surgunda — Toshkent, so‘ngra Orenburg va nihoyat Makka safarida, Afg‘onistonning Karrux qishlog‘ida muhojirlikda yakunladi.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Tarixiy baho</h2>
+        <p>
+            Bugungi kunda Xudoyorxon siymosi turlicha baholanadi. Kimdir uni saroy boyligi uchun xalqni og‘ir soliqlar bilan qiynagan hukmdor desa, boshqalar uni markaziy hokimiyatni saqlashga uringan so‘nggi qalqon deb biladi. Nima bo‘lganda ham, u barpo etgan saroy va u yashagan davr Qo‘qon xonligining naqadar yuksak madaniyatga ega bo‘lganini butun dunyoga isbotlab turibdi.
+        </p>
+    </div>
+
+    <p style="text-align: center; color: var(--gold-leaf); font-style: italic; margin-top: 50px;">
+        "Dunyo bir saroydir, kirgan chiqadi, qurgan ketadi."
+    </p>
+</div>
+
+</body>
+</html>

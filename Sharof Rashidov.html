@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. RANGLI VA JILOLI ASOS */
+        :root {
+            --neon-blue: #00d2ff;
+            --neon-purple: #9d50bb;
+            --gold-glow: #fbbf24;
+            --dark-bg: #020617;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 2. JILOLI FON ANIMATSIYASI */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(0, 210, 255, 0.05) 0%, rgba(157, 80, 187, 0.05) 50%, transparent 100%);
+            animation: rotateGlow 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* 3. KINEMATIK SARLAVHA (TOVLANUVCHI) */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            /* Jiloli rang animatsiyasi */
+            background: linear-gradient(90deg, #00d2ff, #9d50bb, #ffcc00, #00d2ff);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: holoShift 5s linear infinite;
+            filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.5));
+        }
+
+        @keyframes holoShift {
+            to { background-position: 300% center; }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 8px;
+            color: var(--gold-glow);
+            text-transform: uppercase;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* 4. WIKIPEDIA LAYOUT (OCHIQ VA JILOLI) */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .wiki-block {
+            margin-bottom: 80px;
+            position: relative;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid var(--neon-blue);
+            backdrop-filter: blur(10px);
+            /* Blok atrofiga mayin nur */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+
+        .wiki-block:hover {
+            border-left-color: var(--neon-purple);
+            background: rgba(255, 255, 255, 0.05);
+            transform: scale(1.02);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--neon-blue);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 2;
+            color: #cbd5e1;
+            text-align: justify;
+        }
+
+        b {
+            color: var(--gold-glow);
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+        }
+
+        /* 5. RANGLI FAKT CARDLARI */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.1), rgba(157, 80, 187, 0.1));
+        }
+
+        .card span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SHAROF RASHIDOV</h1>
+    <div class="subtitle">BUNYODKORLIK VA JASORAT</div>
+</header>
+
+<main>
+    <div class="grid-container">
+        <div class="card">
+            <span>1959-1983</span>
+            Boshqaruv yillari
+        </div>
+        <div class="card" style="border-color: var(--neon-purple);">
+            <span>1966</span>
+            Toshkent qayta qurilishi
+        </div>
+        <div class="card" style="border-color: var(--gold-glow);">
+            <span>METRO</span>
+            O'rta Osiyoda birinchi
+        </div>
+    </div>
+
+    <section class="wiki-block">
+        <h2>Davlat Arbobi</h2>
+        <p>
+            <b>Sharof Rashidov</b> — O‘zbekiston tarixida o‘chmas iz qoldirgan buyuk siyosat arbobi. Uning rahbarligi davrida O‘zbekiston ulkan qurilish maydoniga aylandi. 1966-yilgi Toshkent zilzilasidan so‘ng, poytaxtni qayta tiklashdagi jasorati va tashkilotchiligi uni haqiqiy xalq qahramoniga aylantirdi. U nafaqat binolar, balki millat ruhini ham qayta tiklagan inson edi.
+        </p>
+    </section>
+
+    <section class="wiki-block">
+        <h2>Bunyodkorlik Merosi</h2>
+        <p>
+            Uning tashabbusi bilan O‘rta Osiyoda birinchi bo‘lib <b>Toshkent metropoliteni</b> barpo etildi. Shuningdek, Navoiy, Zarafshon kabi zamonaviy shaharlar, yuzlab suv omborlari va ulkan sanoat korxonalari Rashidov davrining mevasidir. U O‘zbekistonni "oq oltin" o‘lkasidan ilm-fan va sanoat markaziga aylantirish yo‘lida tinmay mehnat qildi.
+        </p>
+    </section>
+
+    <section class="wiki-block">
+        <h2>Adabiy Simo</h2>
+        <p>
+            Sharof Rashidov shunchaki rahbar emas, balki yuksak didli adib ham edi. Uning <b>"Kashmir qo‘shig‘i"</b> kabi asarlari o‘zbek adabiyotining nafis namunalaridan biri sanaladi. U doimo ilm va san’at ahlini qo‘llab-quvvatlagan, milliy qadriyatlarni sovet mafkurasi ichida ham saqlab qolishga harakat qilgan buyuk ma’rifatparvar edi.
+        </p>
+    </section>
+
+    <footer>RASHIDOV DAVRI — 2026</footer>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0000;
+            color: #e0e0e0;
+            font-family: 'Copperplate', 'Oswald', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Olovli fon effekti */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 90%, rgba(255, 69, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 10%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+            animation: flamePulse 4s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes flamePulse {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .warrior-scroll {
+            max-width: 850px;
+            margin: 50px 20px;
+            padding: 60px;
+            background: rgba(15, 15, 15, 0.95);
+            border-top: 5px solid #8b0000;
+            border-bottom: 5px solid #8b0000;
+            box-shadow: 0 0 40px rgba(139, 0, 0, 0.3);
+            position: relative;
+            animation: borderSlide 1.5s ease-out;
+        }
+
+        @keyframes borderSlide {
+            from { width: 0; opacity: 0; }
+            to { width: 100%; opacity: 1; }
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: center;
+            color: #ff4500;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin: 0;
+            text-shadow: 3px 3px 0px #4a0000;
+            animation: textGlitch 3s infinite;
+        }
+
+        @keyframes textGlitch {
+            0% { transform: skew(0deg); }
+            5% { transform: skew(2deg); color: #ff0000; }
+            10% { transform: skew(0deg); }
+        }
+
+        .title-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff4500, #8b0000, transparent);
+            margin: 30px 0;
+        }
+
+        h2 {
+            color: #ff4500;
+            font-size: 1.8em;
+            border-left: 4px solid #8b0000;
+            padding-left: 15px;
+            margin-top: 45px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.9;
+            text-align: justify;
+            color: #dcdcdc;
+        }
+
+        b {
+            color: #ff6347;
+        }
+
+        .battle-mark {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 40px 0;
+            font-weight: bold;
+            color: #8b0000;
+            letter-spacing: 3px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #8b0000;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="warrior-scroll">
+    <h1>JALOLIDDIN MANGUBERDI</h1>
+    <div class="title-divider"></div>
+
+    <p>
+        <b>Jaloliddin Manguberdi</b> (1199–1231) — Xorazmshohlar davlatining so‘nggi hukmdori, buyuk sarkarda va milliy qahramon. U mo‘g‘ullarning dahshatli istilosiga qarshi mardonavor kurashib, jahon harbiy tarixida o‘chmas iz qoldirgan. Uning ismi "Mangu berdi" — ya’ni Alloh tomonidan mangu qilib berilgan qahramon ma’nosini anglatadi. Manguberdi o‘z hayotini Vatan ozodligi yo‘lida fido qilgan jasorat timsolidir.
+    </p>
+
+    <div class="battle-mark">
+        <span>SINDR DARYOSI</span>
+        <span>|</span>
+        <span>PARVON JANGI</span>
+        <span>|</span>
+        <span>XORAZMSHOH</span>
+    </div>
+
+    <h2>Chingizxonni hayratga solgan jasorat</h2>
+    <p>
+        1221-yilda Sind daryosi bo‘yida yuz bergan jangda Jaloliddin Manguberdi mislsiz jasorat ko‘rsatdi. Son jihatdan bir necha barobar ko‘p bo‘lgan mo‘g‘ul qo‘shiniga qarshi oxirigacha kurashib, daryoga ot bilan sakradi va qirg‘oqqa sog‘-salomat o‘tib ketdi. Buni kuzatib turgan <b>Chingizxon</b> o‘z o‘g‘illariga qarab: "Ota o‘g‘il tug‘sa, mana shunday tug‘ishi kerak", deya dushmaniga tan bergan va hurmat ko‘rsatgan.
+    </p>
+
+    <h2>Parvon jangi va harbiy mahorat</h2>
+    <p>
+        Jaloliddin Manguberdi mo‘g‘ul qo‘shinini ochiq maydonda mag‘lub etgan kam sonli sarkardalardan biridir. <b>Parvon jangi</b>da u o‘zining harbiy strategiyasini namoyon etib, mo‘g‘ul noyonlarining mag‘lub etilmasligi haqidagi afsonani parchalab tashladi. Bu g‘alaba butun Sharq xalqlarida ozodlikka bo‘lgan umidni uyg‘otdi. U o‘n bir yil davomida Vatandan yiroqda bo‘lsa-da, Xorazmshohlar bayrog‘ini baland tutib, dushmanga qarshi kurashni to‘xtatmadi.
+    </p>
+
+    <h2>Vatanparvarlikning oliy namunasi</h2>
+    <p>
+        Manguberdining hayoti faqat janglardan iborat emas, balki u o‘z xalqining sha’ni va nomusi uchun kurashgan chinakam vatanparvar edi. U qisqa umri davomida buyuk imperiyani qayta tiklashga urinmadi, balki mo‘g‘ul zulmidan xalos bo‘lish uchun ittifoqchilar qidirdi. Uning jasorati bugun ham o‘zbek harbiy san’atining poydevori bo‘lib xizmat qiladi. O‘zbekistonda uning nomi bilan ataluvchi yuksak davlat mukofotlari ta’sis etilgan.
+    </p>
+
+    <p>
+        Jaloliddin Manguberdi — mag‘lub bo‘lsa-da, ruhi sinmagan, dushmani tomonidan ham e’tirof etilgan buyuk siymodir. Uning nomi ozodlik va erk uchun kurashayotgan har bir inson uchun ilhom manbai bo‘lib qolaveradi.
+    </p>
+
+    <footer>Vatan ozodligi yo'lida — 2026</footer>
+</div>
+
+</body>
+</html>

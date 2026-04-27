@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. RANGLI VA SIRLI FON */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #110d35, #1c193c, #24243e, #00d0ff);
+            color: #d4d4d8;
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+        }
+
+        /* Qahrabo rangli dinamik fon */
+        .vintage-aura {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(212, 175, 55, 0.07) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(163, 103, 28, 0.07) 0%, transparent 45%);
+            z-index: -1;
+            animation: flowGlow 12s infinite alternate;
+        }
+
+        @keyframes flowGlow {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+
+        /* 2. JILOLI SARLAVHA (GLOW EFFECT) */
+        .hero-banner {
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 22px;
+            /* Oltin va kumush jilosi */
+            background: linear-gradient(90deg, #fff, #fbbf24, #d97706, #fbbf24, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: textShimmer 5s linear infinite;
+            filter: drop-shadow(0 0 25px rgba(251, 191, 36, 0.4));
+        }
+
+        @keyframes textShimmer {
+            to { background-position: 200% center; }
+        }
+
+        .pen-name {
+            font-size: 1.4rem;
+            color: #fbbf24;
+            letter-spacing: 12px;
+            margin-top: 25px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        /* 3. WIKIPEDIA OCHIQ FORMATI */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .manuscript-section {
+            margin-bottom: 70px;
+            border-left: 3px solid #fbbf24;
+            padding-left: 35px;
+            position: relative;
+            animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Tilla rangli nur chizig'i */
+        .manuscript-section::after {
+            content: "";
+            position: absolute;
+            left: -3px; top: 0; width: 3px; height: 100%;
+            background: linear-gradient(to bottom, #fbbf24, #d97706);
+            box-shadow: 0 0 15px #fbbf24;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: #fff;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-shadow: 2px 2px 5px rgba(0,0,0,1);
+        }
+
+        p {
+            font-size: 1.35rem;
+            line-height: 2.2;
+            text-align: justify;
+            color: #a1a1aa;
+        }
+
+        b {
+            color: #fbbf24;
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+            border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        /* 4. MASHHUR IQTIBOS BLOKI */
+        .quote-box {
+            background: rgba(251, 191, 36, 0.04);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            padding: 45px;
+            margin: 60px 0;
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: "“";
+            position: absolute;
+            top: -20px; left: 30px;
+            font-size: 6rem;
+            color: #fbbf24;
+            opacity: 0.2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 120px;
+            color: #27272a;
+            letter-spacing: 15px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="vintage-aura"></div>
+
+<header class="hero-banner">
+    <h1>ABDULLA QODIRIY</h1>
+    <div class="pen-name">Jo'lqinboy — Millat Adibi</div>
+</header>
+
+<main>
+    <section class="manuscript-section" style="animation-delay: 0.3s;">
+        <h2>O‘zbek Romanchiligi Asoschisi</h2>
+        <p>
+            <b>Abdulla Qodiriy</b> (1894–1938) — o‘zbek adabiyotining buyuk siymosi, o‘zbek romanchilik maktabining asoschisi va jadidchilik harakatining faol namoyandasi. U o‘zining betakror asarlari bilan milliy adabiyotni jahon miqyosiga olib chiqdi. Qodiriy nafaqat yozuvchi, balki millat dardi bilan yashagan ma’naviyat fidoyisi edi. Uning <b>"Jo'lqinboy"</b> taxallusi bilan yozgan hajviy asarlari xalqni uyg‘otishda va ijtimoiy illatlarga qarshi kurashda o‘tkir qurol bo‘lib xizmat qildi.
+        </p>
+    </section>
+
+    <div class="quote-box">
+        <p style="font-style: italic; color: #fbbf24; font-size: 1.7rem; margin: 0;">
+            "Modomiki, biz yangi davrga qadam qo'ydik, har bir yo'sunda ham shu yangi davrning yangiliklari ketidan ergashamiz."
+        </p>
+    </div>
+
+    <section class="manuscript-section" style="animation-delay: 0.6s;">
+        <h2>O'lmas Meros: "O'tkan Kunlar"</h2>
+        <p>
+            Adibning <b>"O'tkan kunlar"</b> (1922) romani o‘zbek adabiyotidagi birinchi realistik roman hisoblanadi. Bu asar orqali Qodiriy millatning tarixiy xatolarini tahlil qildi va Turkiston xalqini birlikka chorladi. Otabek va Kumush timsolida u yuksak insoniy fazilatlarni va milliy o‘zlikni tarannum etdi. Shuningdek, <b>"Mehrobdan chayon"</b> romani bilan u tariximizning murakkab sahifalarini ochib berdi. Uning asarlari bugun ham har bir o‘zbek xonadonining ma’naviy javohiri sanaladi.
+        </p>
+    </section>
+
+    <section class="manuscript-section" style="animation-delay: 0.9s;">
+        <h2>Fojiaviy Taqdir va Boqiy Shon</h2>
+        <p>
+            Millatining ozodligini va baxtini kuylagan Abdulla Qodiriy 1938-yilgi qatag‘on qurboni bo‘ldi. Uni soxta ayblar bilan hibsga olishganida ham, u o‘z e’tiqodidan va xalqidan voz kechmadi. Adib qatl etilgan bo‘lsa-da, u qoldirgan adabiy xazina yashashda davom etdi. Bugungi kunda Abdulla Qodiriy nomi zamonaviy o‘zbek adabiyotining quyoshi, milliy ruh va g‘urur timsoli sifatida e’zozlanadi. U barpo etgan badiiy maktab yuzlab yozuvchilar uchun ilhom manbai bo‘lib xizmat qilmoqda.
+        </p>
+    </section>
+
+    <footer>MILLIY ADABIYOT QUYOSHI — 2026</footer>
+</main>
+
+</body>
+</html>

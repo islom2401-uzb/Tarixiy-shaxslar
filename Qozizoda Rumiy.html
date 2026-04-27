@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qozizoda Rumiy | Ustozlar Ustozi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #0c0f16 0%, #010204 100%);
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun geometrik chiziqlar va yulduzli tumanlik */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(168, 85, 247, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 4px;
+            background: linear-gradient(135deg, #6366f1, #a855f7, #312e81, #6366f1);
+            background-size: 300% 300%;
+            animation: auraShift 12s ease infinite;
+            border-radius: 40px;
+            box-shadow: 0 0 120px rgba(99, 102, 241, 0.2);
+            perspective: 1500px;
+        }
+
+        @keyframes auraShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-content {
+            background: rgba(4, 7, 16, 0.98);
+            border-radius: 36px;
+            padding: 90px;
+            text-align: center;
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* H1 - O'ta silliq 7 soniyali kinematik nur */
+        h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #312e81 20%, #ffffff 40%, #ffffff 60%, #312e81 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: slideGlow 7s ease-in-out infinite;
+            letter-spacing: -3px;
+            line-height: 1.1;
+        }
+
+        @keyframes slideGlow {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik Geometrik Kub Belgisi */
+        .geometry-box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 50px;
+            transform-style: preserve-3d;
+            animation: rotateCube 10s linear infinite;
+        }
+
+        .geometry-box div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #6366f1;
+            background: rgba(99, 102, 241, 0.05);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+        }
+
+        @keyframes rotateCube {
+            from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+
+        .cube-front  { transform: translateZ(50px); }
+        .cube-back   { transform: rotateY(180deg) translateZ(50px); }
+        .cube-right  { transform: rotateY(90deg) translateZ(50px); }
+        .cube-left   { transform: rotateY(-90deg) translateZ(50px); }
+        .cube-top    { transform: rotateX(90deg) translateZ(50px); }
+        .cube-bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .data-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .data-card:hover {
+            transform: translateY(-20px);
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .data-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #a855f7;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .data-card p {
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            color: #6366f1;
+            text-align: left;
+            margin: 60px 0 30px;
+            border-left: 8px solid #a855f7;
+            padding-left: 25px;
+        }
+
+        .text-body {
+            font-size: 1.35rem;
+            line-height: 2.3;
+            color: #cbd5e1;
+            text-align: justify;
+            font-weight: 200;
+        }
+
+        .highlight-quote {
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.08), transparent);
+            border-left: 2px solid #6366f1;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #e2e8f0;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #6366f1, #a855f7, #6366f1, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="inner-content">
+        <h1>Qozizoda Rumiy</h1>
+
+        <div class="geometry-box">
+            <div class="cube-front"></div>
+            <div class="cube-back"></div>
+            <div class="cube-right"></div>
+            <div class="cube-left"></div>
+            <div class="cube-top"></div>
+            <div class="cube-bottom"></div>
+        </div>
+
+        <div class="data-grid">
+            <div class="data-card"><span>Tavalludi</span>1364-yil, Bursa</div>
+            <div class="data-card"><span>Vafoti</span>1436-yil, Samarqand</div>
+            <div class="data-card"><span>Unvoni</span>Aflotuni zamon</div>
+        </div>
+
+        <p class="text-body">
+            Samarqand ilm-fan maktabining eng nufuzli siymosi, "Aflotuni zamon" (O‘z davrining Platon) unvoniga sazovor bo‘lgan <strong>Salohiddin Muso ibn Muhammad</strong>, tarixda Qozizoda Rumiy nomi bilan mashhurdir. 1364-yilda Bursada tug‘ilgan bu daho, ilmga bo‘lgan cheksiz ishtiyoqi sababli Temuriylar poytaxtiga keladi. U Mirzo Ulug‘bekning eng suyukli ustozi va "Baytul-hikma" — Samarqand madrasasi va rasadxonasining bosh mudarrisi bo‘lib xizmat qilgan. Rumiy nafaqat nazariyotchi, balki o‘z prinsiplariga sodiq, adolatni podshoh irodasidan ustun qo‘yuvchi haqiqiy olim timsolidir.
+        </p>
+
+        <div class="highlight-quote">
+            "Agar madrasada haqiqat va ilm erkinligi bo‘lmasa, u yerda haqiqiy olim yetishib chiqmaydi."
+        </div>
+
+        <h2>Ilm-fan Cho‘qqisi: Matematika va Astronomiya</h2>
+        <p class="text-body">
+            Qozizoda Rumiyning matematik hisob-kitoblari Mirzo Ulug‘bekning <strong>"Ziji Jadidi Ko‘ragoniy"</strong> asari yaratilishida poydevor vazifasini o‘tagan. U o‘zining <strong>"Sharh al-mulaxxas"</strong> va <strong>"Risolai jayb"</strong> (Sinus haqida risola) asarlari bilan trigonometriya va astronomiyani yangi bosqichga ko‘tardi. U kishi sinusning bir darajasini hisoblashda o‘ta aniq algoritmlarni ishlab chiqqan bo‘lib, bu o‘sha davr uchun mislsiz yutuq edi. Uning sharhlari asrlar davomida butun Sharq madrasalarida asosiy darslik sifatida o‘qitilgan.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Samarqand Akademiyasining Ruhi</h2>
+        <p class="text-body">
+            Allomaning eng buyuk xizmatlaridan biri — Samarqandda dunyoning eng yetuk astronom va matematiklarini birlashtirgan ilmiy muhitni yaratganidir. U Ali Qushchi kabi yosh daholarni kashf etgan va ularni tarbiyalagan. Rivoyatlarga ko‘ra, madrasada ilm erkinligi buzilganda, u dars berishni to‘xtatib, hatto hukmdor Ulug‘bekka ham e’tiroz bildira olgan. Bu qat’iyat uni shogirdlari va xalq nazarida "ustozlar ustozi"ga aylantirdi. 1436-yilda vafot etgan buyuk olim, Ulug‘bekning buyrug‘iga binoan "Shohi Zinda" majmuasida, o‘zi uchun qadrdon bo‘lgan ilmiy maskanlar yaqinida dafn etilgan.
+        </p>
+
+        <p style="text-align: center; color: #a855f7; font-weight: 900; font-size: 1.6rem; letter-spacing: 5px; margin-top: 50px;">
+            MANTIQ SULTONI — AKADEMIYA ASOSI
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

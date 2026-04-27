@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. DINAMIK VA OTASHIN FON */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #020202;
+            color: #e2e2e2;
+            font-family: 'Times New Roman', serif;
+            overflow-x: hidden;
+        }
+
+        /* Alvon va kumush jilo beruvchi fon */
+        .cho-aura {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(220, 38, 38, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(148, 163, 184, 0.08) 0%, transparent 40%);
+            z-index: -1;
+            animation: breatheGlow 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes breatheGlow {
+            from { opacity: 0.4; }
+            to { opacity: 1; transform: scale(1.05); }
+        }
+
+        /* 2. JILOLI SARLAVHA (FIRE & SILVER SHIMMER) */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            /* Olovli va kumushrang gradient */
+            background: linear-gradient(90deg, #fff, #ef4444, #94a3b8, #ef4444, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shineFlame 4s linear infinite;
+            filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.4));
+        }
+
+        @keyframes shineFlame {
+            to { background-position: 200% center; }
+        }
+
+        .pen-name {
+            font-size: 1.3rem;
+            color: #ef4444;
+            letter-spacing: 12px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* 3. WIKIPEDIA OCHIQ STRUKTURASI */
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .wiki-block {
+            margin-bottom: 70px;
+            border-left: 3px solid #ef4444;
+            padding-left: 35px;
+            position: relative;
+            animation: fadeSlideUp 1.2s ease-out forwards;
+        }
+
+        /* Otashin nurli chiziq */
+        .wiki-block::after {
+            content: "";
+            position: absolute;
+            left: -3px; top: 0; width: 3px; height: 100%;
+            background: linear-gradient(to bottom, #ef4444, #94a3b8);
+            box-shadow: 0 0 15px #ef4444;
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            color: #fff;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 2.1;
+            text-align: justify;
+            color: #cbd5e1;
+        }
+
+        b {
+            color: #ef4444;
+            text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* 4. SHE'RIY IQTIBOS BLOKI */
+        .verse-box {
+            background: rgba(239, 68, 68, 0.03);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 40px;
+            margin: 50px 0;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px;
+            color: #1e1e1e;
+            letter-spacing: 12px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cho-aura"></div>
+
+<header class="hero">
+    <h1>ABDULHAMID CHO'LPON</h1>
+    <div class="pen-name">Erk va Tong Shoiri</div>
+</header>
+
+<main>
+    <section class="wiki-block" style="animation-delay: 0.2s;">
+        <h2>Erk va Ozodlik Kuychisi</h2>
+        <p>
+            <b>Abdulhamid Sulaymon o‘g‘li Cho‘lpon</b> (1897–1938) — o‘zbek yangi she’riyatining asoschisi, betakror lirik shoir, dramaturg va tarjimon. U jadidchilik harakatining eng faol vakillaridan biri sifatida millatni uyg‘onishga, erksevarlikka va o‘zlikni anglashga chorlagan. Uning she’rlaridagi <b>"Erk"</b>, <b>"Go'zal"</b> va <b>"Binafsha"</b> kabi timsollar zamirida istibdodga qarshi isyon va hurlikka bo‘lgan cheksiz tashnalik yotadi. Cho‘lpon o‘z ijodi bilan o‘zbek she’riyatiga nafosat va erkinlik ruhini olib kirdi.
+        </p>
+    </section>
+
+    <div class="verse-box">
+        <p style="font-style: italic; color: #ef4444; font-size: 1.6rem; margin: 0; line-height: 1.6;">
+            "Kishan kiyma, bo'yin egma,<br>Ki, sen ham hur tug'ilg'onsen!"
+        </p>
+    </div>
+
+    <section class="wiki-block" style="animation-delay: 0.5s;">
+        <h2>Badiiy Mahorat va "Kecha va Kunduz"</h2>
+        <p>
+            Cho‘lpon o‘zbek nasrini ham yangi bosqichga ko‘targan adibdir. Uning mashhur <b>"Kecha va kunduz"</b> (1936) romani o‘zbek adabiyotidagi psixologik tahlil va ijtimoiy manzara chizishning yuksak namunasidir. Romanda mustamlaka tuzumi sharoitidagi xalq hayoti, tushkunlik va umid o‘rtasidagi kurash mahorat bilan tasvirlangan. Shuningdek, u jahon adabiyoti durdonalarini, xususan, Shekspirning <b>"Hamlet"</b> asarini o‘zbek tiliga yuksak mahorat bilan tarjima qilib, milliy tarjimachilik maktabini boyitdi.
+        </p>
+    </section>
+
+    <section class="wiki-block" style="animation-delay: 0.8s;">
+        <h2>Qatag'on va Abadiyat</h2>
+        <p>
+            Millatning dardini kuylagani va hurlik g‘oyalarini tarqatgani uchun Cho‘lpon 1937-yilda "xalq dushmani" sifatida hibsga olindi va 1938-yil 4-oktabrda fojiali ravishda qatl etildi. Garchi uning asarlari uzoq yillar davomida taqiqlangan bo‘lsa-da, Cho‘lpon ruhi o‘zbek xalqining qalbida yashashda davom etdi. Bugungi kunda u milliy mustaqilligimizning ma’naviy homiysi, o‘zbek she’riyatining yorqin yulduzi va haqiqiy jadid qahramoni sifatida e’zozlanadi. Uning merosi yosh avlod uchun vatanparvarlikning yuksak namunasidir.
+        </p>
+    </section>
+
+    <footer>ERKINLIK RUHI O'LMASDIR — 2026</footer>
+</main>
+
+</body>
+</html>

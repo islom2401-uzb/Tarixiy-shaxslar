@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* body { */
+            /* margin: 0;
+            padding: 0;
+            /* 1. O'ZGARUVCHAN NEON FON: 4 xil rang uyg'unligi */
+            /* background: linear-gradient(-45deg, #2564a8, #e2d21edd, #c81db1a9, #1da31dbc);
+            background-size: 400% 400%; */
+            /* animation: gradientFlow 15s ease infinite; */
+             
+
+          body {
+    /* Eski ranglar o'rniga quyidagi qoramtir ranglarni qo'ying */
+    background: linear-gradient(-45deg, #143d65b5, #0f3f33, #337408d2, #6c1111c2);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    /* ... qolgan kodlar o'zgarishsiz qoladi ... */
+
+
+            color: #e0e1dd;
+            font-family: 'Garamond', serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Fonning o'zgarish animatsiyasi */
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 2. MA'RIFAT NURI: Pulsatsiya qiluvchi aura */
+        .aura {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px; height: 800px;
+            /* Neon moviy nur */
+            background: radial-gradient(circle, rgba(34, 162, 201, 0.934) 0%, transparent 70%);
+            z-index: -1;
+            animation: breath 6s ease-in-out infinite;
+        }
+
+        @keyframes breath {
+            0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.3); }
+        }
+
+        .manuscript {
+            max-width: 850px;
+            margin: 60px 20px;
+            padding: 50px;
+            /* Shaffof va shishasimon effekt (Glassmorphism) */
+            background: rgba(13, 27, 42, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(72, 191, 227, 0.3);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(72, 191, 227, 0.05);
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(20px); }
+            to { opacity: 1; filter: blur(0); transform: translateY(0); }
+        }
+
+        .manuscript::before {
+            content: "❧";
+            position: absolute;
+            top: 25px; left: 25px;
+            color: #19b8e9e0;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #48bfe3;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            color: #48bfe3;
+            margin: 0;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            /* Neon porlashi */
+            text-shadow: 0 0 15px rgba(38, 183, 227, 0.921), 0 0 30px rgba(72, 191, 227, 0.4);
+        }
+
+        .rank {
+            text-align: center;
+            color: #778da9;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+
+        .wiki-side-note {
+            float: left;
+            width: 220px;
+            margin-right: 25px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(13, 27, 42, 0.9);
+            border-left: 4px solid #48bfe3;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            font-size: 0.9em;
+            color: #abc4ff;
+        }
+
+        h2 {
+            color: #48bfe3;
+            border-bottom: 1px solid rgba(72, 191, 227, 0.3);
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(72, 191, 227, 0.3);
+        }
+
+        p {
+            font-size: 1.25em;
+            line-height: 1.8;
+            text-align: justify;
+            color: #e0e1dd;
+        }
+
+        b {
+            color: #48bfe3;
+            text-shadow: 0 0 5px rgba(72, 191, 227, 0.5);
+        }
+
+        .highlight-box {
+            background: rgba(72, 191, 227, 0.07);
+            padding: 25px;
+            margin: 35px 0;
+            border: 1px dashed rgba(72, 191, 227, 0.5);
+            font-style: italic;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(65, 90, 119, 0.5);
+            color: #778da9;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="aura"></div>
+
+<div class="manuscript">
+    <h1>Munavvarqori</h1>
+    <div class="rank">Abdurashidxonov (1878 — 1931)</div>
+
+    <div class="wiki-side-note">
+        <strong>LAVOZIMI:</strong><br>
+        Turkiston jadidchilik harakati rahbari, "Yangi usul" maktablari nazariyotchisi.
+    </div>
+
+    <p>
+        <b>Munavvarqori Abdurashidxonov</b> — XX asr o‘zbek milliy uyg‘onish harakatining yo‘lboshchisi, atoqli ma’rifatparvar va jamoat arbobi. U Toshkentning Shayxontohur dahasida tug‘ilgan va butun umrini millatning ozodligi hamda ma’rifati yo‘lida fido qilgan. U nafaqat darsliklar muallifi, balki o‘zbek ziyolilarining butun bir avlodini tarbiyalab voyaga yetkazgan ulkan murabbiydir.
+    </p>
+
+    <h2>Ma’rifat va Islohot Yo‘li</h2>
+    <p>
+        Munavvarqori 1901-yilda Toshkentda birinchilardan bo‘lib <b>"Usuli jadid"</b> (yangi usul) maktabini tashkil etdi. U millatni faqat diniy emas, balki dunyoviy bilimlar orqali taraqqiyotga olib chiqish mumkinligini tushunib yetgan edi. Uning "Adibi avval" (Birinchi adib) va "Adibi saniy" (Ikkinchi adib) darsliklari o‘nlab yillar davomida maktablarda asosiy qo‘llanma bo‘lib xizmat qildi.
+    </p>
+
+    <div class="highlight-box">
+        "Bizni g'aflat uyqusidan uyg'otuvchi yagona kuch — bu ma'rifatdir. Maktab millatning poydevori, matbuot esa uning ko'zgusidir."
+    </div>
+
+    <h2>Siyosiy Faoliyat va "Sho'roi Islom"</h2>
+    <p>
+        1917-yilgi inqilobiy o‘zgarishlar davrida Munavvarqori <b>"Sho‘roi Islom"</b> tashkilotiga rahbarlik qildi. U Turkiston muxtoriyati g‘oyasining asosiy mualliflaridan biri bo'lib, o'lkaning mustaqilligi va o'zini o'zi boshqarishi uchun qat'iy kurash olib bordi. U nafaqat ta'limda, balki davlat boshqaruvida ham milliy manfaatlarni har narsadan ustun qo'ydi. Uning "Xurshid" gazetasi va "Najot" nashrlari hurlik nidosini butun o'lkaga tarqatdi.
+    </p>
+
+    <h2>Qatag‘on va Boqiy Xotira</h2>
+    <p>
+        Munavvarqorining mustaqillik sari intilishlari va milliy ruhdagi faoliyati sho'ro hukumati uchun xavfli deb topildi. U bir necha bor hibsga olindi va nihoyat 1931-yilda Moskvadagi Butirka qamoqxonasida qatag'on qurboni bo'ldi. Biroq uning g'oyalari o'lmadi. Bugun Munavvarqori nomi milliy g'ururimiz ramzi sifatida e'zozlanadi.
+    </p>
+
+    <p>
+        Xulosa qilib aytganda, Munavvarqori Abdurashidxonov o‘zbek jadidchilik harakatining poydevori edi. U yaratgan ma’rifat tizimi bugungi mustaqil O'zbekistonning ta'lim va madaniyat sohasidagi yutuqlariga asos bo'lib xizmat qilmoqda. Uning nomi xalqimiz qalbida mangu qoladi.
+    </p>
+
+    <footer>MA’RIFAT FIDOYISI — TURKISTON — 2026</footer>
+</div>
+
+</body>
+</html>

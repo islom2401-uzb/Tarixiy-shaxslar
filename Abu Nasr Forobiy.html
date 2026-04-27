@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farobiy | Muallim us-Soniy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun intellektual aura va mantiqiy nur tarmoqlari */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(94, 234, 212, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-card {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 3px;
+            background: linear-gradient(135deg, #14b8a6, #6366f1, #0f172a, #14b8a6);
+            background-size: 300% 300%;
+            animation: flowBorder 10s ease infinite;
+            border-radius: 60px 10px;
+            box-shadow: 0 0 80px rgba(20, 184, 166, 0.2);
+        }
+
+        @keyframes flowBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: rgba(2, 6, 23, 0.98);
+            border-radius: 58px 8px;
+            padding: 80px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+
+        /* H1 - O'ta silliq 7 soniyali kinematik yaltirash */
+        h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #0f172a 20%, #ffffff 40%, #ffffff 60%, #0f172a 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: silverSlide 7s ease-in-out infinite;
+            letter-spacing: -3px;
+        }
+
+        @keyframes silverSlide {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik Musiqiy To'lqin va Sfera Belgisi */
+        .wisdom-symbol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            height: 120px;
+            margin-bottom: 50px;
+        }
+
+        .wave-bar {
+            width: 6px;
+            height: 40px;
+            background: #14b8a6;
+            border-radius: 3px;
+            animation: harmony 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes harmony {
+            from { height: 20px; opacity: 0.3; }
+            to { height: 80px; opacity: 1; box-shadow: 0 0 20px #14b8a6; }
+        }
+
+        .wave-bar:nth-child(2) { animation-delay: 0.2s; background: #2dd4bf; }
+        .wave-bar:nth-child(3) { animation-delay: 0.4s; background: #5eead4; }
+        .wave-bar:nth-child(4) { animation-delay: 0.6s; background: #2dd4bf; }
+        .wave-bar:nth-child(5) { animation-delay: 0.8s; background: #14b8a6; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(20, 184, 166, 0.15);
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .info-card:hover {
+            transform: translateY(-15px);
+            border-color: #5eead4;
+            background: rgba(20, 184, 166, 0.05);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.7rem;
+            color: #14b8a6;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #14b8a6;
+            margin: 50px 0 30px;
+            text-align: left;
+            border-left: 8px solid #6366f1;
+            padding-left: 25px;
+        }
+
+        p {
+            font-size: 1.35rem;
+            line-height: 2.4;
+            color: #cbd5e1;
+            text-align: justify;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .wisdom-box {
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.05), transparent);
+            padding: 40px;
+            border-radius: 20px;
+            border-right: 4px solid #14b8a6;
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #e2e8f0;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #14b8a6, #6366f1, #14b8a6, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="inner-box">
+        <h1>Abu Nasr Forobiy</h1>
+        
+        <div class="wisdom-symbol">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card"><span>Tavalludi</span>873-yil, Farob</div>
+            <div class="info-card"><span>Vafoti</span>950-yil, Damashq</div>
+            <div class="info-card"><span>Unvoni</span>Muallim us-soniy</div>
+        </div>
+
+        <p>
+            Insoniyat tafakkurini tizimlashtirgan buyuk mutafakkir <strong>Abu Nasr al-Farobiy</strong> 873-yilda Sirdaryo bo'yidagi Farob shahrida dunyoga kelgan. U kishi nafaqat o'z davrining, balki barcha asrlarning eng yirik qomusiy olimlaridan biri hisoblanadi. Farobiy Arastuning qiyin va murakkab falsafiy asarlarini sharhlab, ularni keng ommaga tushunarli qilib bergani uchun jahon ilm-fanida "Ikkinchi muallim" degan yuksak nomga sazovor bo'lgan. Uning ilmiy qiziqishlari falsafadan tortib to fizikagacha, mantiqdan tortib to musiqagacha bo'lgan 70 dan ortiq tillarni va deyarli barcha fanlarni qamrab olgan.
+        </p>
+
+        <div class="wisdom-box">
+            "Baxtga erishish uchun inson o'z aql-idrokini tarbiyalashi va jamiyat bilan uyg'unlikda yashashi lozim."
+        </div>
+
+        <h2>Fozil Odamlar Shahri</h2>
+        <p>
+            Farobiyning eng mashhur asarlaridan biri <strong>"Fozil odamlar shahri"</strong> bo'lib, unda u mukammal jamiyat va adolatli davlat qurish g'oyasini ilgari surgan. U kishi insonlarni baxtli bo'lishlari uchun birlashishga va o'zaro yordamga chaqiradi. Farobiyning falsafiy qarashlari o'rta asrlarda uyg'onish davriga poydevor bo'ldi va keyinchalik Ibn Sino, Ibn Rushd kabi buyuk olimlarning shakllanishiga kuchli ta'sir ko'rsatdi. Uning fikricha, haqiqiy rahbar nafaqat aqlli, balki yuksak axloqiy fazilatlar sohibi ham bo'lishi kerak.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Musiqa va Matematika Uyg'unligi</h2>
+        <p>
+            Farobiy musiqa nazariyasi sohasida ham inqilob qilgan olimdir. Uning <strong>"Kitob al-musiqa al-kabir"</strong> (Musiqa haqida katta kitob) asari Sharq musiqashunosligining "oltin asosi" hisoblanadi. U kishi birinchi bo'lib tovushlarning fizik tabiatini va ularning inson ruhiyatiga ta'sirini matematik asosda tushuntirib berdi. Rivoyatlarga ko'ra, Farobiy o'zi ixtiro qilgan cholg'u asbobida shunday kuy chalganki, tinglovchilar goh yig'lagan, goh kulgan, gohida esa shirin uyquga ketgan. 950-yilda Damashqda vafot etgan buyuk alloma, insoniyatga o'chmas mantiqiy va ma'naviy meros qoldirdi.
+        </p>
+
+        <p style="text-align: center; color: #5eead4; font-weight: 900; font-size: 1.6rem; letter-spacing: 5px; margin-top: 50px;">
+            AKSARUL-HIKMA — MANTIQ QUYOSHI
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

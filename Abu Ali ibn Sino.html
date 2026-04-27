@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibn Sino | Tibbiyot Sultoni</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #010409;
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+        }
+
+        /* Fon uchun shifobaxsh zumrad va oltin jilolar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 2px;
+            background: linear-gradient(135deg, #10b981, #d4af37, #064e3b, #10b981);
+            background-size: 300% 300%;
+            animation: flowBG 8s linear infinite;
+            border-radius: 80px 20px 80px 20px;
+            box-shadow: 0 0 100px rgba(16, 185, 129, 0.2);
+        }
+
+        @keyframes flowBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: rgba(2, 8, 18, 0.98);
+            border-radius: 78px 18px 78px 18px;
+            padding: 90px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h1 {
+            font-size: 5.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #065f46 20%, #ffffff 40%, #ffffff 60%, #065f46 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShine 7s ease-in-out infinite;
+            letter-spacing: -4px;
+        }
+
+        @keyframes textShine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Hayot asosi (DNA/Spiral) dinamik belgisi */
+        .dna-icon {
+            position: relative;
+            width: 100px;
+            height: 140px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .dna-icon div {
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, #10b981, #d4af37);
+            border-radius: 4px;
+            animation: dnaDance 2s ease-in-out infinite;
+        }
+
+        @keyframes dnaDance {
+            0%, 100% { transform: scaleY(0.4); opacity: 0.5; }
+            50% { transform: scaleY(1); opacity: 1; }
+        }
+
+        .dna-icon div:nth-child(2) { animation-delay: 0.2s; }
+        .dna-icon div:nth-child(3) { animation-delay: 0.4s; }
+        .dna-icon div:nth-child(4) { animation-delay: 0.6s; }
+        .dna-icon div:nth-child(5) { animation-delay: 0.8s; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .stat-item:hover {
+            transform: scale(1.1);
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .stat-item span {
+            color: #10b981;
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #10b981;
+            text-align: left;
+            margin: 60px 0 30px;
+            border-left: 10px solid #d4af37;
+            padding-left: 30px;
+        }
+
+        .content-text {
+            font-size: 1.35rem;
+            line-height: 2.4;
+            color: #cbd5e1;
+            text-align: justify;
+            font-weight: 200;
+        }
+
+        .medical-quote {
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(90deg, rgba(16, 185, 129, 0.05), transparent);
+            border-right: 2px solid #10b981;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #d4af37;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #10b981, #d4af37, #10b981, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="inner-box">
+        <h1>Ibn Sino</h1>
+
+        <div class="dna-icon">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item"><span>Ismi</span>Abu Ali ibn Sino</div>
+            <div class="stat-item"><span>Tavalludi</span>980-yil, Afshona</div>
+            <div class="stat-item"><span>Vafoti</span>1037-yil, Hamadon</div>
+            <div class="stat-item"><span>Asari</span>Al-Qonun fit-Tib</div>
+        </div>
+
+        <p class="content-text">
+            O‘rta asrlar Sharqining eng yirik mutafakkiri, tabib va faylasufi <strong>Abu Ali al-Husayn ibn Sino</strong> 980-yilda Buxoro yaqinidagi Afshona qishlog‘ida tavallud topgan. U kishi 10 yoshidayoq Qur’onni yod olgan va 18 yoshida o‘sha davrning barcha ilmlarini, jumladan, tibbiyot, matematika, astronomiya va falsafani mukammal egallagan. Ibn Sino inson salomatligi va kasalliklar tabiatini o‘rganishda shunchalik ilgarilab ketgan ediki, u kishi yaratgan tashxis usullari asrlar osha o‘z qiymatini yo‘qotmadi.
+        </p>
+
+        <div class="medical-quote">
+            "Vahimaning o‘zi yarim kasallikdir, xotirjamlik yarim sog‘liqdir, sabr esa shifoning boshlanishidir."
+        </div>
+
+        <h2>Tibbiyot Inqilobi va "Tib Qonunlari"</h2>
+        <p class="content-text">
+            Ibn Sinoning dunyoga mashhur <strong>"Al-Qonun fit-tib"</strong> (Tibbiyot qonunlari) asari besh kitobdan iborat bo‘lib, u tibbiy bilimlar ensiklopediyasi hisoblanadi. Unda qon aylanish tizimi, yuqumli kasalliklarning tarqalish yo‘llari (mikroblar haqidagi dastlabki farazlar), psixologiyaning jismoniy holatga ta’siri va 800 dan ortiq dorivor o‘simliklarning xususiyatlari batafsil yoritilgan. Ushbu asar XII asrdayoq lotin tiliga tarjima qilinib, Yevropaning barcha nufuzli universitetlarida 500 yildan ortiq vaqt davomida asosiy darslik sifatida o‘qitilgan. Ibn Sino nafaqat tana, balki ruh tabibi ham edi.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Falsafa va Mangu Meros</h2>
+        <p class="content-text">
+            Ibn Sino falsafa sohasida Aristotel ta’limotini rivojlantirib, mantiq va metafizikani yangi bosqichga olib chiqdi. Uning <strong>"Kitob ash-shifo"</strong> asari insoniyat tafakkurining cho‘qqilaridan biri hisoblanadi. Alloma jami 450 dan ortiq asar yozgan bo‘lib, ulardan 240 tasi bizgacha yetib kelgan. U kishi moddaning bo‘linmasligi, yorug‘lik tezligi va astronomik hodisalar haqida ham hayratlanarli ilmiy xulosalar bergan. Bugungi kunda jahon tibbiyoti va farmatsevtikasi Ibn Sino poydevor qo‘ygan asoslarga tayanadi. Alloma 1037-yilda vafot etgan bo‘lsa-da, u barpo etgan "Shifo maktabi" insoniyatga xizmat qilishda davom etmoqda.
+        </p>
+
+        <p style="text-align: center; color: #d4af37; font-weight: 800; font-size: 1.6rem; letter-spacing: 5px; margin-top: 50px;">
+            HAKIMUL-UMMA — SHIFO MAYOQI
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

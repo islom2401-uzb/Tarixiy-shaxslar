@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg: #05080a;
+            --accent: #00f2ff;
+            --gold: #ffc107;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Cinzel', serif;
+            overflow-x: hidden;
+        }
+
+        /* 1. Animatsiyalangan fon - Tutun va zarralar */
+        .hero-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #0a1f24 0%, #05080a 100%);
+            z-index: -1;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, var(--gold) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+            animation: moveParticles 20s linear infinite;
+        }
+
+        @keyframes moveParticles {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+
+        /* 2. Asosiy blok - Kinematik uslub */
+        .epic-wrapper {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 40px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 5vw;
+            text-align: center;
+            margin: 0;
+            letter-spacing: 20px;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--gold);
+            position: relative;
+            animation: textBreath 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes textBreath {
+            from { letter-spacing: 15px; opacity: 0.5; }
+            to { letter-spacing: 25px; opacity: 1; color: var(--gold); text-shadow: 0 0 50px rgba(255,193,7,0.5); }
+        }
+
+        .title-sub {
+            text-align: center;
+            display: block;
+            font-size: 1.2rem;
+            color: var(--accent);
+            letter-spacing: 5px;
+            margin-bottom: 80px;
+            opacity: 0.8;
+        }
+
+        /* 3. Matnli bloklar - Shaffof va dinamik */
+        .content-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 2px solid var(--gold);
+            padding: 40px;
+            margin: 50px 0;
+            backdrop-filter: blur(10px);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .content-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 5px solid var(--accent);
+            transform: translateX(10px);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 2.2;
+            font-size: 1.15rem;
+            color: #b0c4de;
+            text-align: justify;
+        }
+
+        /* 4. "Vignette" effekti - burchaklarni qorong'ulatish */
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+        }
+
+        /* 5. Statik dekoratsiya */
+        .decor-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-bg">
+    <div class="particles"></div>
+</div>
+<div class="vignette"></div>
+
+<div class="epic-wrapper">
+    <h1>FERUZ</h1>
+    <span class="title-sub">Muhammad Rahimxon II</span>
+
+    <div class="decor-line"></div>
+
+    <div class="content-card">
+        <h2>Ma'rifat Sultoni</h2>
+        <p>
+            <b>Muhammad Rahimxon II</b> (1845–1910) — Xiva xonligining nafaqat hukmdori, balki butun Turkiston ma'naviyatini yoritgan mash'aldir. Uning taxtga kelishi bilan Xiva "Shoirlar shahri"ga aylandi. U <b>"Feruz"</b> taxallusi bilan ishqiy va tasavvufiy she'rlar bitib, o'zbek adabiyotiga yangi ruh bag'ishlagan. Bu shunchaki ism emas, bu san'at va siyosatning uyg'unlashgan nuqtasidir.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2>Ilk Matbaa va Madaniyat</h2>
+        <p>
+            Hukmdorning eng buyuk xizmatlaridan biri — 1874-yilda O'rta Osiyoda birinchi bo'lib <b>toshbosma (litografiya)</b> usulida kitob chop etishni yo'lga qo'yganidir. Bu harakat ma'rifatni ommalashtirish yo'lidagi ulkan qadam edi. Uning saroyida yuzlab kotiblar, musavvirlar va xattotlar ijod qilgan bo'lib, Xiva qo'lyozmalari bugun dunyoning eng nufuzli muzeylarida saqlanmoqda.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2>Musiqa va Shashmaqom</h2>
+        <p>
+            Feruz musiqa ilmining chinakam bilimdoni edi. U Xorazm maqomlarini notaga tushirish va ularni kelajak avlodga bezavol yetkazishga boshchilik qildi. Uning o'zi ham bir qancha kuylar bastalagan. U barpo etgan Muhammad Rahimxon madrasasi nafaqat diniy bilimlar, balki musiqa, astronomiya va matematika o'qitiladigan ma'rifat o'chog'i edi.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2>Tarixiy Meros</h2>
+        <p>
+            Garchi uning davrida xonlik murakkab siyosiy jarayonlarni boshidan kechirgan bo'lsa-da, Muhammad Rahimxon II milliy o'zlikni saqlab qolishning yagona yo'li sifatida madaniyat va ta'limni ko'rdi. Uning "Devon"i va u yaratgan adabiy muhit bugungi kunda ham o'zbek xalqining ma'naviy xazinasidir. U Xiva shahrini tirik muzeyga aylantirgan haqiqiy me'mordir.
+        </p>
+    </div>
+
+    <p style="text-align: center; color: var(--gold); font-style: italic; margin-top: 100px;">
+        "Ilm o'rganing, zero u dunyoda saodat, oxiratda esa nurdir."
+    </p>
+</div>
+
+</body>
+</html>

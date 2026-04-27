@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temur Malik | Jasorat Timsoli</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #2d0a0a 0%, #050101 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+        }
+
+        /* Fon uchun qonli-qizil va metall tusli jangovar jilolar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 15%, rgba(220, 38, 38, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(148, 163, 184, 0.08) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-card {
+            position: relative;
+            width: 90%;
+            max-width: 950px;
+            padding: 4px;
+            background: linear-gradient(135deg, #b91c1c, #94a3b8, #450a0a, #b91c1c);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+            border-radius: 50px;
+            box-shadow: 0 0 80px rgba(185, 28, 28, 0.3);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: #0d0404;
+            border-radius: 46px;
+            padding: 70px;
+            text-align: center;
+        }
+
+        /* H1 - Silliq va sekin 7 soniyali yaltirash */
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #7f1d1d 20%, #ffffff 40%, #ffffff 60%, #7f1d1d 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: lightSweep 7s ease-in-out infinite;
+        }
+
+        @keyframes lightSweep {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Jangovar Jasorat Iconi */
+        .majestic-icon {
+            font-size: 95px;
+            margin: 15px auto 40px;
+            display: inline-block;
+            background: linear-gradient(45deg, #b91c1c, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 25px rgba(185, 28, 28, 0.6));
+            animation: shieldPulse 5s ease-in-out infinite;
+        }
+
+        @keyframes shieldPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(185, 28, 28, 0.2);
+            transition: 0.4s;
+        }
+
+        .info-card:hover {
+            border-color: #f87171;
+            background: rgba(185, 28, 28, 0.05);
+            transform: translateY(-10px);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #f87171;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #ef4444;
+            margin: 50px 0 25px;
+            text-align: left;
+            border-left: 6px solid #94a3b8;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 2.2;
+            color: #d1d5db;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #b91c1c, #94a3b8, #b91c1c, transparent);
+            margin: 50px 0;
+            opacity: 0.4;
+        }
+
+        .epic-quote {
+            background: rgba(185, 28, 28, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 4px solid #b91c1c;
+            font-style: italic;
+            font-size: 1.3rem;
+            margin: 40px 0;
+            color: #fca5a5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="inner-box">
+        <h1>Temur Malik</h1>
+        
+        <div class="majestic-icon">🛡️</div>
+
+        <div class="info-grid">
+            <div class="info-card"><span>Unvoni</span>Xo'jand hokimi</div>
+            <div class="info-card"><span>Asosiy jangi</span>Xo'jand mudofaasi</div>
+            <div class="info-card"><span>Sifati</span>Yengilmas sarkarda</div>
+        </div>
+
+        <p>
+            O‘zbek xalqining jasur farzandi, vatanparvarlik va ozodlik kurashining yorqin timsoli <strong>Temur Malik</strong> XIII asrda mo‘g‘ul bosqinchilariga qarshi mardona kurash olib borgan Xo‘jand hokimi va yirik sarkardadir. Chingizxon qo‘shinlari Movarounnahrga bostirib kirganida, Temur Malik o‘z xalqi bilan birga vatan himoyasiga otlandi. Uning nomi tarix sahifalariga nafaqat kuchli harbiy rahbar, balki dushmanni hayratda qoldirgan o‘tkir strateg sifatida muhrlangan. U Xo‘jand mudofaasida ko‘rsatgan matonati bilan Sharq xalqlari orasida afsonaga aylangan.
+        </p>
+
+        <div class="epic-quote">
+            "Vatan ozodligi yo'lida jon berish — mardning eng oliy saodatidir."
+        </div>
+
+        <h2>Sirdaryo Uzra Jasorat</h2>
+        <p>
+            Temur Malikning eng mashhur jasorati 1220-yilda Xo‘jand mudofaasi paytida sodir bo‘ldi. U Sirdaryo o‘rtasidagi orolda mustahkam qal’a qurib, mo‘g‘ullarning ulkan qo‘shiniga qarshi uzoq vaqt qarshilik ko‘rsatdi. Mudofaa imkonsiz bo‘lib qolganida, u maxsus yopiq kemalar yasab, daryo bo‘ylab dushman qamalini yorib o‘tdi. Ushbu kemalar ustidan o‘q va olov o‘tmasligi uchun namat va loy bilan qoplangan edi. Temur Malik kemada daryo bo‘ylab suzib borar ekan, dushman qo‘shini daryo qirg‘og‘idan uni tinmay ta’qib qilgan, biroq sarkarda o‘z mahorati bilan ularga qaqshatqich zarbalar berib, qamaldan chiqib ketishga muvaffaq bo‘lgan.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Jaloliddin Manguberdi bilan Ittifoq</h2>
+        <p>
+            Qamaldan chiqqach, Temur Malik Xorazmshohlar davlatining so‘nggi sultoni Jaloliddin Manguberdi bilan birlashdi va mo‘g‘ullarga qarshi kurashni davom ettirdi. U Parvon jangida va Hind daryosi bo‘yidagi to‘qnashuvlarda sultonning eng yaqin maslahatchisi va jasur jangchisi sifatida ishtirok etdi. Temur Malik hayotining so‘nggi yillarini darvish qiyofasida o‘tkazgan bo‘lsa-da, uning qalbi doimo ozod vatan sog‘inchi bilan yashadi. Uning jasorati bugungi kunda ham vatan sadoqatining eng oliy namunasi bo‘lib xizmat qiladi. Sarkardaning hayoti va kurashi yoshlarimiz uchun haqiqiy jasorat maktabi bo‘lib, u barpo etgan ozodlik ruhi avlodlar qalbida mangu yashaydi.
+        </p>
+
+        <p style="text-align: center; color: #ef4444; font-weight: bold; font-size: 1.4rem; letter-spacing: 2px;">
+            Xo'jand Arsloni — O'chmas Jasorat
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

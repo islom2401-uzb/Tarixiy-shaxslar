@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at center, #001d3d 0%, #000814 100%);
+            color: #e0e2e5;
+            font-family: 'Palatino', serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Yulduzli osmon effekti */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            animation: starsRotate 100s linear infinite;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        @keyframes starsRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .observatory-frame {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 50px;
+            background: rgba(0, 29, 61, 0.6);
+            border: 1px solid #4cc9f0;
+            box-shadow: 0 0 50px rgba(76, 201, 240, 0.15);
+            backdrop-filter: blur(10px);
+            position: relative;
+            animation: fadeIn 3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3.8em;
+            text-align: center;
+            letter-spacing: 10px;
+            color: #4cc9f0;
+            text-shadow: 0 0 20px rgba(76, 201, 240, 0.6);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #bde0fe;
+            letter-spacing: 5px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #4cc9f0;
+            border-bottom: 1px solid rgba(76, 201, 240, 0.3);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 2;
+            text-align: justify;
+            color: #d1d9e0;
+        }
+
+        b {
+            color: #4cc9f0;
+        }
+
+        .constellation {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            border-top: 1px solid rgba(76, 201, 240, 0.2);
+            border-bottom: 1px solid rgba(76, 201, 240, 0.2);
+            padding: 20px 0;
+        }
+
+        .data-point {
+            text-align: center;
+            font-size: 0.9em;
+            color: #bde0fe;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #4cc9f0;
+            font-size: 0.8em;
+            letter-spacing: 4px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="observatory-frame">
+    <h1>MIRZO ULUG‘BEK</h1>
+    <div class="subtitle">Olim va Hukmdor</div>
+
+    <p>
+        <b>Mirzo Ulug‘bek</b> (Muhammad Tarag‘ay) — buyuk astronom, matematik, davlat arbobi va Temuriylar sulolasining yirik namoyandasi. 1394-yilda Sultoniya shahrida tavallud topgan Ulug‘bek, bobosi Amir Temurning harbiy yurishlarida ishtirok etib, yoshligidanoq ilm-fanga, ayniqsa falakiyot va matematikaga katta qiziqish ko‘rsatgan. U davlatni boshqarish bilan birga, koinot sirlarini o‘rganishni hayotining mazmuni deb bildi.
+    </p>
+
+    <div class="constellation">
+        <div class="data-point">1018 TA YULDUZ JADVALI</div>
+        <div class="data-point">SAMARQAND RASADXONASI</div>
+        <div class="data-point">ZIJI JADIDI KO'RAGONIY</div>
+    </div>
+
+    <h2>Ilm-fan homiysi va Samarqand madrasasi</h2>
+    <p>
+        Ulug‘bek 1409-yildan Movarounnahr hukmdori sifatida Samarqandni ilm-fan markaziga aylantirdi. U barpo etgan <b>Samarqand madrasasi</b> o‘sha davrning eng nufuzli universiteti bo‘lib, u yerda diniy fanlar bilan birga aniq fanlar — matematika, geometriya va astronomiya o‘qitilgan. Ulug‘bekning o‘zi ham talabalarga dars bergan va o‘z atrofida Qozizoda Rumiy, G‘iyosiddin Jamshid Koshiy kabi o‘sha davrning eng yirik olimlarini to‘plagan.
+    </p>
+
+    <h2>Samarqand rasadxonasi va "Zij"</h2>
+    <p>
+        1424–1428-yillarda Ulug‘bek dunyoda yagona bo‘lgan ulkan rasadxonani barpo etdi. Bu yerda o‘tkazilgan kuzatuvlar natijasida <b>"Ziji jadidi Ko‘ragoniy"</b> asari yaratildi. Unda 1018 ta yulduzning holati va joylashuvi misli ko‘rilmagan aniqlikda belgilab berildi. Ulug‘bek aniqlagan yulduz yili hisobi zamonaviy hisob-kitoblardan atigi bir necha soniyaga farq qiladi, bu esa uning naqadar buyuk matematik bo‘lganidan dalolat beradi.
+    </p>
+
+    <h2>Ma’rifatparvar hukmdor fojiasi</h2>
+    <p>
+        Davlat arbobi sifatida Ulug‘bek mamlakat obodonchiligi va iqtisodiy rivojlanishiga ham katta e’tibor qaratdi. Biroq, uning ilm-fanga bo‘lgan haddan tashqari sadoqati va erkin fikrlari o‘sha davrdagi ayrim mutaassib kuchlarga yoqmas edi. 1449-yilda u fojiali tarzda halok bo‘ldi. Shunga qaramay, u qoldirgan meros asrlar osha dunyo ilm-fanini yoritib kelmoqda.
+    </p>
+
+    <p>
+        Mirzo Ulug‘bekning nomi bugun nafaqat yerda, balki osmonda ham yashamoqda — Oyning kraterlaridan biriga va kichik sayyoraga uning nomi berilgan. U insoniyatga "Ilm o‘rganish har bir muslim va muslima uchun farzdir" degan g‘oyani amalda ko‘rsatib bergan chinakam ma’rifatparvar hukmdor edi.
+    </p>
+
+    <footer>SAMARQAND RASADXONASI — 2026</footer>
+</div>
+
+</body>
+</html>

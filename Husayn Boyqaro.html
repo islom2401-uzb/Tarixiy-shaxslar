@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #02010a;
+            color: #d1d1d1;
+            font-family: 'Times New Roman', serif;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Naqshinkor fon animatsiyasi */
+        body::before {
+            content: "✺";
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 800px;
+            color: rgba(138, 43, 226, 0.05);
+            animation: rotatePattern 60s linear infinite;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes rotatePattern {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .royal-manuscript {
+            max-width: 850px;
+            margin: 60px 20px;
+            padding: 50px;
+            background: rgba(10, 10, 25, 0.9);
+            border: 1px solid #483d8b;
+            border-radius: 40px 0 40px 0;
+            box-shadow: 0 0 40px rgba(72, 61, 139, 0.4);
+            animation: slideIn 1.5s ease-out;
+            position: relative;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: center;
+            color: #9370db;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            margin: 0;
+            text-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+            background: linear-gradient(45deg, #483d8b, #9370db, #483d8b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .title-ornament {
+            text-align: center;
+            color: #9370db;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #9370db;
+            border-left: 5px solid #483d8b;
+            padding-left: 20px;
+            margin-top: 45px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.25em;
+            line-height: 2;
+            text-align: justify;
+            color: #c0c0c0;
+        }
+
+        b {
+            color: #9370db;
+        }
+
+        .art-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+            border-top: 1px double #483d8b;
+            padding-top: 30px;
+        }
+
+        .column-item {
+            font-style: italic;
+            color: #a9a9a9;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #483d8b;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="royal-manuscript">
+    <h1>HUSAYN BOYQARO</h1>
+    <div class="title-ornament">꧁ ⚜ ꧂</div>
+
+    <p>
+        <b>Sulton Husayn Boyqaro</b> (1438–1506) — Temuriylar sulolasining taniqli namoyandasi, Hirot taxtining eng uzoq muddatli hukmdori (1469–1506) va yuksak madaniyat homiysi. U o‘z davrining eng ma’rifatparvar sultonlaridan biri bo‘lib, Hirotni dunyo madaniyati, san’ati va ilmining markaziga aylantirgan. Husayn Boyqaro nafaqat davlat arbobi, balki <b>"Husayniy"</b> taxallusi bilan she’rlar bitgan iste’dodli shoir ham edi.
+    </p>
+
+    <div class="art-columns">
+        <div class="column-item">HIROTNING OLTIN DAVRI</div>
+        <div class="column-item">TASVIRIY SAN'AT MAKTABI</div>
+    </div>
+
+    <h2>Navoiy bilan Ma’naviy Ittifoq</h2>
+    <p>
+        Husayn Boyqaroning hukmronlik davrini buyuk mutafakkir <b>Alisher Navoiy</b>siz tasavvur etib bo‘lmaydi. Ular maktabdosh do‘st bo‘lib, Husayn Boyqaro taxtga o‘tirgach, Navoiyni o‘ziga eng yaqin maslahatchi va vazir etib tayinladi. Bu do‘stlik natijasida Hirotda misli ko‘rilmagan bunyodkorlik ishlari amalga oshirildi. Sulton Navoiyning barcha ilmiy va ijodiy tashabbuslarini qo‘llab-quvvatladi, bu esa turkiy adabiyotning jahon miqyosiga chiqishiga poydevor bo‘ldi.
+    </p>
+
+    <h2>San’at va Me’morchilik Gullashi</h2>
+    <p>
+        Sulton Husayn davrida Hirotda nafaqat adabiyot, balki tasviriy san’at ham yuksak cho‘qqiga chiqdi. Mashhur musavvir <b>Kamoliddin Behzod</b> ayniqsa uning saroyida ijod qilib, Sharq miniatyura san’atini dunyoga tanitdi. Me’morchilikda ham o‘ziga xos "Hirot uslubi" shakllandi. Madrasalar, shifoxonalar, karvonsaroylar va bog‘lar shaharni bezadi. Sultonning "Xamsatun-mutahayyirin" kabi asarlarga homiylik qilishi uning naqadar yuksak did sohibi ekanligini ko‘rsatadi.
+    </p>
+
+    <h2>Davlat Boshqaruvi va Meros</h2>
+    <p>
+        Husayn Boyqaro murakkab siyosiy vaziyatlarda ham Hirotning barqarorligini saqlashga harakat qildi. Uning "Risola" asari o‘z davrining ijtimoiy-siyosiy va adabiy hayotini o‘rganishda muhim manba hisoblanadi. Garchi uning vafotidan so‘ng Temuriylar saltanati inqirozga yuz tutgan bo‘lsa-da, u qoldirgan madaniy meros — "Hirot renessansi" insoniyat ma’naviy xazinasining durdonasi bo‘lib qoldi.
+    </p>
+
+    <p>
+        Bugun Husayn Boyqaro nomi adolatli hukmdor va haqiqiy san’at shaydosi sifatida e’zozlanadi. U barpo etgan muhit Navoiy, Jomiy, Behzod kabi daholarning kamol topishiga sharoit yaratdi. Uning hayoti va faoliyati — kuch-qudrat va madaniyat uyg‘unligining yuksak namunasidir.
+    </p>
+
+    <footer>HIROT RENESSANSI — 2026</footer>
+</div>
+
+</body>
+</html>

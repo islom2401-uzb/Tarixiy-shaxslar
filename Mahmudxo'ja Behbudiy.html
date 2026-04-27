@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #050505;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Orqa fondagi "Ma'rifat nuri" animatsiyasi */
+        .light-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 165, 0, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        body::before {
+            content: "✎";
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 600px;
+            color: rgba(255, 215, 0, 0.03);
+            animation: pulsePen 10s ease-in-out infinite;
+            z-index: -2;
+        }
+
+        @keyframes pulsePen {
+            0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) scale(1.1) rotate(10deg); }
+        }
+
+        .enlightenment-page {
+            max-width: 850px;
+            margin: 60px 20px;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(40, 40, 40, 0.95));
+            border-top: 4px solid #ffa500;
+            border-bottom: 4px solid #ffa500;
+            position: relative;
+            box-shadow: 0 0 50px rgba(255, 165, 0, 0.2);
+            animation: pageOpen 2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes pageOpen {
+            from { transform: perspective(1000px) rotateY(-15deg); opacity: 0; }
+            to { transform: perspective(1000px) rotateY(0deg); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            color: #ffa500;
+            margin: 0;
+            letter-spacing: 8px;
+            text-shadow: 2px 2px 0px #333, 0 0 20px rgba(255, 165, 0, 0.6);
+            font-family: 'Times New Roman', serif;
+        }
+
+        .motto {
+            text-align: center;
+            font-style: italic;
+            color: #ffd700;
+            margin: 15px 0 40px 0;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 165, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 165, 0, 0.3);
+            padding: 10px 0;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #ffa500;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #ffa500;
+            font-weight: 300;
+            font-size: 2em;
+            border-left: 3px solid #ffa500;
+            padding-left: 20px;
+            margin: 40px 0 20px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.9;
+            text-align: justify;
+            color: #e0e0e0;
+            margin-bottom: 25px;
+        }
+
+        b {
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 0 5px;
+        }
+
+        .ink-splash {
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+            padding: 15px;
+            background: rgba(255, 165, 0, 0.05);
+            border: 1px dashed #ffa500;
+            text-align: center;
+            font-size: 0.95em;
+            color: #ffd700;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            letter-spacing: 3px;
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="light-glow"></div>
+
+<div class="enlightenment-page">
+    <div class="news-header">
+        <span>SAMARQAND</span>
+        <span>1875 — 1919</span>
+        <span>OYNA JURNALI</span>
+    </div>
+
+    <h1>BEHBUDIY</h1>
+    <div class="motto">"Haq olinur, berilmas!"</div>
+
+    <div class="ink-splash">
+        <strong>JADIDCHILIK ASOSCHISI</strong><br>
+        300 ga yaqin maqola, ilk o‘zbek dramasi muallifi va millat yo‘lchi yulduzi.
+    </div>
+
+    <p>
+        <b>Mahmudxo‘ja Behbudiy</b> — nafaqat yozuvchi, balki Turkiston jadidchilik harakatining ma’naviy otasi va yo‘lboshchisidir. U o‘zining butun hayotini millatning ongini uyg‘otishga, uni jaholat botqog‘idan ilm nuri orqali olib chiqishga bag‘ishladi. Behbudiy dunyoqarashi keng, bir necha tillarni mukammal bilgan va xorijiy davlatlardagi taraqqiyotni o‘z yurtida tatbiq etishni orzu qilgan buyuk islohotchi edi.
+    </p>
+
+    <h2>Ma’rifat Mash’ali va Teatr</h2>
+    <p>
+        Behbudiy 1911-yilda yozilgan <b>"Padarkush"</b> dramasi bilan o‘zbek dramaturgiyasiga asos soldi. U teatrni "ibratxona" deb atadi va xalqni tarbiyalashning eng samarali yo‘li deb bildi. Bu drama orqali u ilmsizlikning fojiali oqibatlarini, jaholat qanday qilib millatni halokatga yetaklashi mumkinligini ko‘rsatib berdi. Uning asarlari Samarqanddan tortib butun Turkiston bo‘ylab yangi usul maktablarining ochilishiga turtki bo‘ldi.
+    </p>
+
+    <h2>Matbuot va Erkin So'z</h2>
+    <p>
+        Uning rahbarligida nashr etilgan <b>"Oyna"</b> jurnali o‘z davrining eng nufuzli minbariga aylandi. Behbudiy jurnal sahifalarida til, imlo, madaniyat va siyosat masalalarini ochiq-oydin yoritib bordi. U "Ikki emas, to‘rt tilni bilish lozim" degan shiorni ilgari surib, yoshlarni zamonaviy dunyo bilan tillashishga chorladi. Uning har bir maqolasi xalq uchun o‘ziga xos ma’naviy darslik vazifasini o‘tadi.
+    </p>
+
+    <h2>Milliy Ozodlik va Fojia</h2>
+    <p>
+        Behbudiy siyosiy maydonda ham faol bo'lib, Turkiston muxtoriyati va milliy birlik g'oyalarining ashaddiy himoyachisi edi. Uning qat'iy irodasi va o'tkir mantiqi mustamlaka tuzumini xavotirga soldi. 1919-yilda u sayohat chog'ida fitna qurboni bo'ldi, biroq uning "Bizning qonimiz ozodlikka yo'l ochsin" degan so'nggi nidosi amalga oshdi. Uning o'limi millat uchun ulkan yo'qotish bo'lsa-da, u barpo etgan ma'rifat poydevori bugun ham mustahkam turibdi.
+    </p>
+
+    <p>
+        Bugungi kunda Behbudiy siymosi — biz uchun matonat, vatanparvarlik va yuksak tafakkur namunasidir. U qoldirgan meros o'zbek ma'naviyatining eng yorqin sahifalaridan birini tashkil etadi. Biz uning orzularidagi ma'rifatli avlodni tarbiyalash yo'lida uning g'oyalaridan kuch olamiz.
+    </p>
+
+    <footer>OYNA — MILLAT KO‘ZGUSI — 2026</footer>
+</div>
+
+</body>
+</html>

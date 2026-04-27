@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1a1a1a;
+            color: #d1d1d1;
+            font-family: 'Garamond', serif;
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(45deg, #111 0px, #111 2px, transparent 2px, transparent 4px);
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .conqueror-frame {
+            max-width: 850px;
+            margin: 70px 20px;
+            padding: 60px;
+            background: #111827;
+            border: 1px solid #4b5563;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            animation: frameEntry 1.5s ease-out;
+        }
+
+        @keyframes frameEntry {
+            from { opacity: 0; transform: scaleX(0.8); }
+            to { opacity: 1; transform: scaleX(1); }
+        }
+
+        .steel-line {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #9ca3af, #4b5563, transparent);
+            margin: 20px 0;
+            animation: steelGlow 3s infinite;
+        }
+
+        @keyframes steelGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; filter: brightness(1.5); }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            color: #f3f4f6;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        h2 {
+            color: #9ca3af;
+            border-left: 3px solid #f3f4f6;
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.25em;
+            line-height: 2;
+            text-align: justify;
+            color: #9ca3af;
+        }
+
+        b {
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.2);
+        }
+
+        .war-stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #374151;
+        }
+
+        .stat-box {
+            text-align: center;
+            font-size: 0.85em;
+            letter-spacing: 2px;
+            color: #6b7280;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.8em;
+            color: #4b5563;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="conqueror-frame">
+    <h1>SHAYBONIYXON</h1>
+    <div class="steel-line"></div>
+
+    <p>
+        <b>Muhammad Shayboniyxon</b> (1451–1510) — o‘zbek davlatchiligi tarixida yangi davrni boshlab bergan yirik davlat arbobi, Shayboniylar sulolasining asoschisi va mohir sarkarda. Abu-l-Xayrxonning nabirasi bo‘lgan bu siymo, parokanda holatdagi o‘zbek qabilalarini birlashtirib, Movarounnahr va Xuroson hududlarida qudratli markazlashgan davlat barpo etdi. U nafaqat jangchi, balki o‘z davrining bilimdon olimi va shoiri ham edi.
+    </p>
+
+    <div class="war-stats">
+        <div class="stat-box">SHAYBONIYLAR ASOSCHISI</div>
+        <div class="stat-box">MOVAROUNNAHR HUKMDORI</div>
+        <div class="stat-box">1500 — SAMARQAND FATHI</div>
+    </div>
+
+    <h2>Davlatchilikni tiklash yo‘lida</h2>
+    <p>
+        Shayboniyxon 1500-yilda Temuriylar poytaxti — Samarqandni egallash bilan Movarounnahrda o‘z hukmronligini o‘rnatdi. U qisqa vaqt ichida Buxoro, Toshkent va Hirot kabi muhim strategik shaharlarni fath etdi. Uning asosiy maqsadi — Chingizxon va Amir Temur an’analariga tayangan holda buyuk turkiy imperiyani qayta tiklash edi. U davlat boshqaruvida harbiy intizom va ma’muriy islohotlarni uyg‘unlashtirgan qat’iyatli hukmdor sifatida tanilgan.
+    </p>
+
+    <h2>Ma’naviyat va adabiy meros</h2>
+    <p>
+        Garchi tarixda ko‘proq foteh sifatida tilga olinsa-da, Shayboniyxon yuksak intellektual salohiyatga ega shaxs edi. U turkiy, forsiy va arab tillarini mukammal bilgan, islom huquqi (fiqh) bo‘yicha yirik mutaxassis hisoblangan. Uning <b>"Devon"</b>i hamda diniy-falsafiy masalalarga bag‘ishlangan <b>"Bahr ul-hudo"</b> asari adibning adabiy iste’dodidan dalolat beradi. U o‘z saroyiga olimlar va shoirlarni to‘plab, ilm-fan rivojiga homiylik qilgan.
+    </p>
+
+    <h2>Tarixiy burilish va Meros</h2>
+    <p>
+        Shayboniyxon davrida Movarounnahrda siyosiy hokimiyat butunlay o‘zbek sulolalari qo‘liga o‘tdi. Bu davr iqtisodiy yuksalish, yangi madaniy aloqalarning shakllanishi bilan ham xarakterlanadi. U 1510-yilda Marv yaqinidagi jangda halok bo‘lgan bo‘lsa-da, u asos solgan davlat qariyb yuz yil davomida mintaqa rivojini belgilab berdi. Bugungi kunda Shayboniyxon nomi o‘zbek milliy davlatchiligi poydevorini mustahkamlagan qat’iyatli arbob sifatida e’tirof etiladi.
+    </p>
+
+    <p>
+        Shayboniyxon siymosi murakkab va serqirradir. U bir vaqtning o‘zida ham qat’iyatli hukmdor, ham chuqur bilimli ilohiyotchi sifatida tarixda o‘chmas iz qoldirdi. U barpo etgan siyosiy tizim o‘rta asrlar O‘rta Osiyo tarixida yangi bir sahifani ochib berdi.
+    </p>
+
+    <footer>SHAYBONIYLAR SALTANATI — 2026</footer>
+</div>
+
+</body>
+</html>

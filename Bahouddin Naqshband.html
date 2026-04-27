@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahouddin Naqshband | Tasavvuf Sultoni</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #0a1f1d 0%, #020505 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+        }
+
+        /* Fon uchun sokin tasavvufiy nurlar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 50% 10%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .main-card {
+            position: relative;
+            width: 90%;
+            max-width: 950px;
+            padding: 4px;
+            background: linear-gradient(135deg, #14b8a6, #d4af37, #0f172a, #14b8a6);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+            border-radius: 50px;
+            box-shadow: 0 0 80px rgba(20, 184, 166, 0.2);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: #050d0c;
+            border-radius: 46px;
+            padding: 70px;
+            text-align: center;
+        }
+
+        /* H1 - Silliq va sekin 7 soniyali yaltirash */
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #134e4a 20%, #ffffff 40%, #ffffff 60%, #134e4a 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: lightSweep 7s ease-in-out infinite;
+        }
+
+        @keyframes lightSweep {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Ruhiy Sokinlik Iconi (Tasbih/Naqsh ramzi) */
+        .majestic-icon {
+            font-size: 95px;
+            margin: 15px auto 40px;
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #fff, #14b8a6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 20px rgba(20, 184, 166, 0.5));
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.08); filter: brightness(1.2); }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(20, 184, 166, 0.15);
+            transition: 0.4s;
+        }
+
+        .info-card:hover {
+            border-color: #d4af37;
+            background: rgba(20, 184, 166, 0.05);
+            transform: translateY(-8px);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #14b8a6;
+            margin: 50px 0 25px;
+            text-align: left;
+            border-left: 6px solid #d4af37;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 2.2;
+            color: #94a3b8;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #14b8a6, #d4af37, #14b8a6, transparent);
+            margin: 50px 0;
+            opacity: 0.4;
+        }
+
+        .mystic-quote {
+            font-size: 1.5rem;
+            color: #d4af37;
+            font-style: italic;
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="inner-box">
+        <h1>Bahouddin Naqshband</h1>
+        
+        <div class="majestic-icon">📿</div>
+
+        <div class="info-grid">
+            <div class="info-card"><span>To'liq ismi</span>Muhammad Bahouddin</div>
+            <div class="info-card"><span>Tavalludi</span>1318-yil, Buxoro</div>
+            <div class="info-card"><span>Vafoti</span>1389-yil, Buxoro</div>
+        </div>
+
+        <p>
+            Tasavvuf olamining eng yirik namoyandasi, Naqshbandiya tariqatining asoschisi va "Balogardon" (Balolarni qaytaruvchi) unvoni sohibi <strong>Xoja Bahouddin Naqshband</strong> 1318-yilda Buxoro yaqinidagi Qasri Hinduvon (hozirgi Qasri Orifon) qishlog'ida dunyoga kelgan. U kishining "Naqshband" nisbasi — ko'ngilga Alloh nomini naqsh qiluvchi degan ma'noni anglatadi. Bahouddin yoshligidanoq ruhiy poklik va ilohiy ishq yo'liga kirib, o'z davrining mashhur pirlari Sayyid Amir Kulol kabi ustozlardan ta'lim oldi. U tasavvufni hayotdan uzilmagan holda rivojlantirgan buyuk murabbiydir.
+        </p>
+
+        <div class="mystic-quote">
+            "Dil ba yoru, dast ba kor." (Ko'ngil Allohda bo'lsin, qo'l esa mehnatda.)
+        </div>
+
+        <h2>Naqshbandiya Tariqati va Falsafasi</h2>
+        <p>
+            Bahouddin Naqshband tariqatining asosiy g'oyasi — xilvatda emas, balki xalq ichida bo'lib, doimiy ravishda Allohni yod etishdir. U kishi tasavvufdagi balandparvozlik va zohidlik niqobi ostidagi dangasalikni rad etdi. Naqshbandiya tariqati "Safar dar vatan" (Vatan ichra safar) va "Hush dar dam" (Har bir nafasdan ogohlik) kabi o'n bitta asosiy qoidaga tayanadi. Bu ta'limot insonni halol mehnat qilishga, kamtarin bo'lishga va jamiyatga foyda keltirishga chorlaydi. Aynan shu sababli Naqshbandiya tariqati butun Markaziy Osiyo, Hindiston, Turkiya va arab mamlakatlarida eng keng tarqalgan ma'naviy yo'nalishlardan biriga aylandi.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Ma'naviy Meros va Ehtirom</h2>
+        <p>
+            Bahouddin Naqshband 1389-yilda o'zi tug'ilgan qishloqda vafot etdi. U kishi vafotidan so'ng Buxoro "Qubbatul Islom" (Islom gumbazi) sifatidagi maqomini yanada mustahkamladi. Bugungi kunda Buxorodagi Bahouddin Naqshband majmuasi nafaqat go'zal me'moriy obida, balki dunyo musulmonlarining eng muqaddas ziyoratgohlaridan biridir. Mustaqillik yillarida ushbu majmua to'liq qayta ta'mirlandi va u yerda katta ilmiy markaz tashkil etildi. Naqshband hazratlarining o'gitlari bugun ham insonlarni ruhiy poklikka, halollikka va vatanparvarlikka o'rgatuvchi ma'naviy manba bo'lib xizmat qilmoqda. Uning "Oz bo'lsa ham halol mehnat qil" degan da'vati milliy qadriyatlarimizning uzviy qismiga aylangan.
+        </p>
+
+        <p style="text-align: center; color: #d4af37; font-weight: bold; font-size: 1.4rem; letter-spacing: 2px;">
+            Yetti Pirning Sarvari — Boqiy Nur
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

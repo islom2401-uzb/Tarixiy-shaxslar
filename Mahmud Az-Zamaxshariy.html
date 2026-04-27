@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Az-Zamaxshariy | Tilshunoslik Sultoni</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #0a192f 0%, #020617 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+        }
+
+        /* Fon uchun lojuvard va qadimiy oltin nurlar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-card {
+            position: relative;
+            width: 90%;
+            max-width: 950px;
+            padding: 4px;
+            background: linear-gradient(135deg, #0ea5e9, #fbbf24, #1e3a8a, #0ea5e9);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+            border-radius: 50px;
+            box-shadow: 0 0 80px rgba(14, 165, 233, 0.25);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: #040d1e;
+            border-radius: 46px;
+            padding: 70px;
+            text-align: center;
+        }
+
+        /* H1 - Silliq va sekin 7 soniyali yaltirash */
+        h1 {
+            font-size: 4.3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #1e3a8a 20%, #ffffff 40%, #ffffff 60%, #1e3a8a 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: lightSweep 7s ease-in-out infinite;
+        }
+
+        @keyframes lightSweep {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Salobatli Qalam Iconi */
+        .majestic-icon {
+            font-size: 90px;
+            margin: 15px auto 40px;
+            display: inline-block;
+            background: linear-gradient(45deg, #fbbf24, #fff, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.4));
+            animation: penGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes penGlow {
+            0%, 100% { transform: rotate(-5deg) scale(1); opacity: 0.8; }
+            50% { transform: rotate(5deg) scale(1.1); opacity: 1; }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: 0.4s;
+        }
+
+        .info-card:hover {
+            border-color: #fbbf24;
+            background: rgba(56, 189, 248, 0.05);
+            transform: translateY(-10px);
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 0.75rem;
+            color: #fbbf24;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #38bdf8;
+            margin: 50px 0 25px;
+            text-align: left;
+            border-left: 6px solid #fbbf24;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 2.2;
+            color: #cbd5e1;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #0ea5e9, #fbbf24, #0ea5e9, transparent);
+            margin: 50px 0;
+            opacity: 0.4;
+        }
+
+        .quote-box {
+            background: rgba(251, 191, 36, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px dashed #fbbf24;
+            font-style: italic;
+            font-size: 1.3rem;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="inner-box">
+        <h1> Az-Zamaxshariy</h1>
+        
+        <div class="majestic-icon">✒️</div>
+
+        <div class="info-grid">
+            <div class="info-card"><span>Unvoni</span>Jorulloh</div>
+            <div class="info-card"><span>Tavalludi</span>1075-yil, Xorazm</div>
+            <div class="info-card"><span>Vafoti</span>1144-yil, Xorazm</div>
+        </div>
+
+        <p>
+            Arab tili va adabiyoti, tafsir hamda jug'rofiya ilmining buyuk namoyandasi <strong>Mahmud ibn Umar az-Zamaxshariy</strong> 1075-yilda Xorazmning Zamaxshar qishlog'ida dunyoga kelgan. U kishi o'zining yuksak ilmi va arab tilini mukammal bilishi tufayli nafaqat Movarounnahrda, balki butun arab dunyosida "Faqru Xorazm" (Xorazm faxri) va "Jorulloh" (Allohning qo'shnisi) unvonlariga sazovor bo'lgan. Zamaxshariy uzoq yillar Makkada yashab, u yerda o'zining shoh asarlarini yaratdi va butun dunyo ulamolari uning huzuriga ilm o'rganish uchun kela boshladilar.
+        </p>
+
+        <div class="quote-box">
+            "Arab tili - jannat ahli tilidir. Uni o'rganish nafaqat ilm, balki ibodat darajasidagi vazifadir."
+        </div>
+
+        <h2>Tafsir Cho'qqisi: "Al-Kashshof"</h2>
+        <p>
+            Az-Zamaxshariyning dunyoga mashhur bo'lishiga sabab bo'lgan eng buyuk asari <strong>"Al-Kashshof"</strong> tafsiridir. Bu asar Qur'oni Karim oyatlarining balog'ati va fasohatini, ya'ni til boyligini ochib berishda hanuzgacha tengsiz hisoblanadi. Garchi alloma aqida bobida mu'taziliylik yo'nalishiga mansub bo'lsa-da, uning tafsiri shunchalik yuksak mahorat bilan yozilganki, hatto boshqa mazhab vakillari ham undan asosiy manba sifatida foydalanishgan. Uning bu asari arab tili qoidalarini (nahv va sarf) tushunishda eng ishonchli poydevor bo'lib xizmat qiladi.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Ilmiy Meros va Tilshunoslik</h2>
+        <p>
+            Allomaning <strong>"Asosul-balog'a"</strong> asari arab tili lug'atshunosligida yangi davrni ochib berdi. U so'zlarni nafaqat ma'nosini, balki ularning ko'chma va majoziy qo'llanilishini ham tushuntirib bergan. Shuningdek, uning "Al-Mufassal" asari nahv (grammatika) ilmining "injili" deb e'tirof etiladi. Zamaxshariy nafaqat tilshunos, balki adib sifatida ham mashhur bo'lib, uning "Atvaquz-zahab" (Oltin shokilalar) kabi pand-nasihatga yo'g'rilgan asarlari inson odob-axloqini yuksaltirishga xizmat qiladi. 1144-yilda vafot etgan buyuk alloma o'zidan keyingi avlodlar uchun arab tili va islom ilmlarini o'rganishda mangu mayoq bo'lib qoldi.
+        </p>
+
+        <p style="text-align: center; color: #fbbf24; font-weight: bold; font-size: 1.4rem; letter-spacing: 2px;">
+            Xorazm Faxri — Tilshunoslik Quyoshi
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

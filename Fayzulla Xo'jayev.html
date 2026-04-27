@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. ASOSIY STIL */
+        body {
+            margin: 0;
+            background-color: #010a08; /* Juda to'q zumrad rang */
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+        }
+
+        /* 2. DAXSHATLI SARLAVHA ANIMATSIYASI */
+        .hero-title {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #021a11, #010a08);
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            background: linear-gradient(90deg, #fff, #fbbf24, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: goldGlow 4s linear infinite;
+            filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.4));
+        }
+
+        @keyframes goldGlow {
+            to { background-position: 200% center; }
+        }
+
+        .tagline {
+            color: #10b981;
+            letter-spacing: 8px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        /* 3. WIKIPEDIA USLUBIDAGI OCHIQ MATN */
+        .wiki-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            border-left: 2px solid #10b981; /* Yon chiziq ziyo ramzi */
+            padding-left: 30px;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h2 {
+            color: #fbbf24;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            text-align: justify;
+        }
+
+        b {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+        }
+
+        /* 4. ODDIY LEKIN CHIROYLI FAKT BLOKI */
+        .fact-box {
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            color: #065f46;
+            letter-spacing: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-title">
+        <h1>FAYZULLA XO'JAYEV</h1>
+        <div class="tagline">Millat Fidoyisi</div>
+    </div>
+
+    <div class="wiki-content">
+        <div class="section" style="animation-delay: 0.5s;">
+            <h2>Siyosiy Faoliyat</h2>
+            <p>
+                <b>Fayzulla Xo'jayev</b> (1896-1938) — O'zbekistonning atoqli davlat arbobi, Buxoro jadidlarining yetakchisi. U 1920-1924 yillarda Buxoro Xalq Sovet Respublikasini boshqargan. Keyinchalik <b>O'zbekiston SSR</b> hukumatining birinchi rahbari sifatida faoliyat yuritib, milliy davlatchilik asoslarini qurishda beqiyos xizmat qilgan.
+            </p>
+        </div>
+
+        <div class="fact-box">
+            <p style="margin: 0; color: #fbbf24; font-style: italic;">
+                "Bizning asosiy vazifamiz — xalqni jaholatdan qutqarish va milliy iqtisodiyotni oyoqqa turg'azishdir."
+            </p>
+        </div>
+
+        <div class="section" style="animation-delay: 1s;">
+            <h2>Ma'rifat va O'zlik</h2>
+            <p>
+                U o'zining barcha ulkan boyligini millat ma'rifatiga sarfladi. Yuzlab o'zbek yoshlarini <b>Germaniya</b> va boshqa chet el mamlakatlariga o'qishga yubordi. U "Vatan faqat bilimli avlod qo'lida mustaqil bo'ladi" deb hisoblagan va milliy teatr, matbuot hamda fanni rivojlantirishga bor kuchini sarflagan.
+            </p>
+        </div>
+
+        <div class="section" style="animation-delay: 1.5s;">
+            <h2>Fojia va Meros</h2>
+            <p>
+                1937-yilda "millatchilik"da ayblanib, qatag'on qilindi. 1938-yilda Moskvada qatl etilgan bo'lsa-da, u qoldirgan g'oyalar o'zbek xalqining ma'naviyatida yashashda davom etdi. Bugun u zamonaviy O'zbekistonning poydevorini qo'ygan buyuk siymolardan biri sifatida e'zozlanadi.
+            </p>
+        </div>
+
+        <footer>O'ZBEKISTON TARIXI ARXIVI — 2026</footer>
+    </div>
+
+</body>
+</html>

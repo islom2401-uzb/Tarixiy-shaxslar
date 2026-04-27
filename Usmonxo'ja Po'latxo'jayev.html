@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. ASOSIY FON VA ASOS */
+        body {
+            margin: 0;
+            background-color: #020c1b; /* To'q moviy-tungi fon */
+            color: #f1f5f9;
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* 2. KINEMATIK SARLAVHA (DAXSHATLI EFFEKT) */
+        .hero-header {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #072e54 0%, #020c1b 100%);
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 18px;
+            /* Oltin va kumush tovlanishi */
+            background: linear-gradient(90deg, #e2e8f0, #fbbf24, #e2e8f0);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shineGold 5s linear infinite;
+            filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.3));
+            text-align: center;
+        }
+
+        @keyframes shineGold {
+            to { background-position: 200% center; }
+        }
+
+        .status {
+            color: #38bdf8; /* Lojuvard rang */
+            letter-spacing: 10px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+
+        /* 3. WIKIPEDIA OCHIQ KONTEKST */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .wiki-block {
+            margin-bottom: 60px;
+            border-left: 3px solid #38bdf8;
+            padding-left: 35px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #fbbf24;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            text-align: justify;
+        }
+
+        b {
+            color: #fff;
+            border-bottom: 1px solid #38bdf8;
+        }
+
+        /* 4. RANGLI IQTIBOS */
+        .legacy-quote {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .legacy-quote::before {
+            content: "“";
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 5rem;
+            color: #38bdf8;
+            opacity: 0.3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px;
+            color: #334155;
+            letter-spacing: 6px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Skroll chizig'i */
+        .scroll-line {
+            position: absolute;
+            bottom: 30px;
+            width: 2px;
+            height: 60px;
+            background: linear-gradient(to bottom, #fbbf24, transparent);
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes scrollDown {
+            0% { transform: scaleY(0); transform-origin: top; }
+            50% { transform: scaleY(1); transform-origin: top; }
+            51% { transform: scaleY(1); transform-origin: bottom; }
+            100% { transform: scaleY(0); transform-origin: bottom; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-header">
+        <h1>USMONXO'JA<br>PO'LATXO'JAYEV</h1>
+        <div class="status">Mustaqillik Fidoyisi</div>
+        <div class="scroll-line"></div>
+    </header>
+
+    <main>
+        <div class="wiki-block" style="animation-delay: 0.5s;">
+            <h2>Inqilobiy Yo'l</h2>
+            <p>
+                <b>Usmonxo‘ja Po‘latxo‘jayev</b> (1878–1968) — Buxoro jadidchiligining asoschilaridan biri, taniqli davlat va jamoat arbobi. U 1921-yilda <b>Buxoro Xalq Sovet Respublikasi</b> Markaziy Ijroiya Qo‘mitasining raisi (davlat rahbari) sifatida faoliyat yuritgan. Usmon Xo‘ja nafaqat siyosatchi, balki millatni uyg‘otishga intilgan buyuk ma’rifatparvar edi.
+            </p>
+        </div>
+
+        <div class="legacy-quote">
+            <p style="margin: 0; font-style: italic; color: #38bdf8; font-size: 1.4rem;">
+                "Vatan ozodligi yo'lida qon to'kish — biz uchun oliy saodatdir. Biz faqat hur yashashni istaymiz."
+            </p>
+        </div>
+
+        <div class="wiki-block" style="animation-delay: 1s;">
+            <h2>Qarshilik Harakati</h2>
+            <p>
+                Bolsheviklarning Buxorodagi bosqinchilik siyosatiga qarshi ochiqdan-ochiq chiqish qilgan Usmon Xo‘ja, 1921-yilning oxirida qurolli qo‘zg‘olon ko‘tarib, dushmanga qarshi jangga kirdi. U milliy ozodlik harakatini tashkil etib, <b>Sharqiy Buxoro</b> (hozirgi Tojikiston hududi)da qizil armiyaga qarshi mardona kurash olib bordi. Uning jasorati o‘sha davr yoshlari uchun haqiqiy namuna bo‘ldi.
+            </p>
+        </div>
+
+        <div class="wiki-block" style="animation-delay: 1.5s;">
+            <h2>Muhojirlik va Boqiy Nom</h2>
+            <p>
+                Siyosiy vaziyat og‘irlashgach, u muhojirlikda — Afg‘oniston, Eron va nihoyat <b>Turkiya</b>da yashashga majbur bo‘ldi. Muhojirlikda bo‘lsa-da, Turkiston ozodligi g‘oyasidan hech qachon voz kechmadi. Usmonxo‘ja Po‘latxo‘jayev 1968-yilda Turkiyada vafot etdi. Bugun uning nomi mustaqil O‘zbekiston tarixining oltin sahifalarida, o‘zlikni anglash timsoli sifatida porlab turibdi.
+            </p>
+        </div>
+
+        <footer>TURKISTON OZODLIK HARAKATI — 2026</footer>
+    </main>
+
+</body>
+</html>

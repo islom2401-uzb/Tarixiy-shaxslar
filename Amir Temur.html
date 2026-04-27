@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #050505;
+            color: #d4af37;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .imperial-scroll {
+            max-width: 800px;
+            padding: 100px 50px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #111 50%, #0a0a0a 100%);
+            border-left: 2px solid #d4af37;
+            border-right: 2px solid #d4af37;
+            box-shadow: 0 0 100px rgba(212, 175, 55, 0.1);
+            animation: slideUp 2s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 4.5em;
+            text-align: center;
+            letter-spacing: 15px;
+            margin: 0;
+            background: linear-gradient(0deg, #8e6d28 0%, #fcf4a3 50%, #8e6d28 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+            animation: pulseGold 3s infinite alternate;
+        }
+
+        @keyframes pulseGold {
+            from { filter: brightness(1) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)); }
+            to { filter: brightness(1.5) drop-shadow(0 0 30px rgba(212, 175, 55, 0.8)); }
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fcf4a3;
+            text-transform: uppercase;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.25em;
+            line-height: 2.1;
+            text-align: justify;
+            color: #e0e0e0;
+        }
+
+        b {
+            color: #fcf4a3;
+            font-size: 1.1em;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            border: 1px solid #d4af37;
+            padding: 20px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .stat-item:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 0.8em;
+            letter-spacing: 5px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="imperial-scroll">
+    <h1>AMIR TEMUR</h1>
+    <div class="divider"></div>
+
+    <p>
+        <b>Amir Temur ibn Tarag‘ay Bahodir</b> — jahon tarixining eng qudratli shaxslaridan biri, buyuk sarkarda va markazlashgan davlat asoschisi. U 1336-yil 9-aprelda Kesh yaqinidagi Xo‘ja Ilg‘or qishlog‘ida tavallud topgan. Sohibqiron nomi bilan tarixda qolgan bu ulug‘ siymo, parokanda va o‘zaro nizo ichida qolgan o‘lkalarni birlashtirib, o‘z davrining eng qudratli saltanatini barpo etishga muvaffaq bo‘lgan.
+    </p>
+
+    <h2>Davlatchilik va Adolat</h2>
+    <p>
+        Sohibqironning davlat boshqaruvidagi eng oliy tamoyili <b>"Kuch — adolatdadir"</b> shiori bo‘lgan. U o‘zining mashhur <b>"Temur tuzuklari"</b> asarida davlatni boshqarishning huquqiy va ma’naviy asoslarini belgilab bergan. Temur davlatni to‘rt ustun — kengash, tadbir, mashvarat va qat’iyat ustiga qurdi. Uning fikricha, adolatli podshoh — xalqning homiysi va davlatning ustunidir. Har bir vazir, har bir amaldor xalq oldida mas’ul ekani qat’iy belgilab qo‘yilgan.
+    </p>
+
+    <div class="stat-grid">
+        <div class="stat-item">27 MAMLAKAT HUKMDORI</div>
+        <div class="stat-item">SOHIBQIRON UNVONI</div>
+    </div>
+
+    <h2>Diplomatiya va Aloqalar</h2>
+    <p>
+        Amir Temur o‘z davrida dunyo siyosiy xaritasini shakllantirgan diplomat ham edi. U Fransiya qiroli Karl VI, Angliya qiroli Genrix IV va Kastiliya qiroli Enrike III bilan doimiy aloqalarni yo‘lga qo‘ygan. Uning elchilik tizimi Sharq va G‘arb o‘rtasidagi savdo va madaniy aloqalarni yangi bosqichga ko‘tardi. Buyuk Ipak yo‘li uning davrida eng xavfsiz va gullagan davrini yashadi. Bu esa dunyo iqtisodiyotining rivojlanishiga ulkan turtki bo‘ldi.
+    </p>
+
+    <h2>Ilm-fan va Bunyodkorlik</h2>
+    <p>
+        Davlat arbobi sifatida Temur ilm-fan, madaniyat va me’morchilikka homiylik qildi. U dunyoning turli burchaklaridan eng mohir olimlar, muhandislar va san’atkorlarni Samarqandga to‘pladi. "Movarounnahrning har bir shahrida madrasalar, shifoxonalar va masjidlar qurilsin", degan farmoni o‘sha davrdagi uyg‘onish davri — Temuriylar renessansiga poydevor bo‘ldi. U barpo etgan bog‘lar va saroylar bugungi kunda ham insoniyatni hayratga soladi.
+    </p>
+
+    <p>
+        Amir Temur 1405-yil 18-fevralda O‘trorda vafot etdi, biroq u barpo etgan davlatchilik maktabi asrlar osha yashab kelmoqda. Bugungi kunda O‘zbekiston mustaqilligining ma’naviy poydevori aynan Sohibqiron bobomiz merosiga tayanadi. Uning jasorati va adolati kelajak avlodlar uchun hamisha faxr va namuna bo‘lib qoladi.
+    </p>
+
+    <footer>TEMURIYLAR SALTANATI - 2026</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1a150e;
+            color: #f3e5ab;
+            font-family: 'Constantia', serif;
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #daa520 0%, transparent 40%);
+            opacity: 0.3;
+            z-index: -1;
+            animation: sunGlow 6s infinite alternate;
+        }
+
+        @keyframes sunGlow {
+            from { opacity: 0.2; transform: scale(1); }
+            to { opacity: 0.4; transform: scale(1.1); }
+        }
+
+        .registan-frame {
+            max-width: 850px;
+            margin: 80px 20px;
+            padding: 60px;
+            background: rgba(40, 30, 20, 0.95);
+            border: 3px solid #00ced1;
+            border-image: linear-gradient(to bottom, #00ced1, #daa520) 1;
+            box-shadow: 0 0 60px rgba(218, 165, 32, 0.2);
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            color: #daa520;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin: 0;
+            filter: drop-shadow(0 0 10px rgba(218, 165, 32, 0.5));
+        }
+
+        .symbol {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+            color: #00ced1;
+        }
+
+        h2 {
+            color: #00ced1;
+            font-weight: normal;
+            border-bottom: 1px solid #daa520;
+            padding-bottom: 10px;
+            margin-top: 45px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.25em;
+            line-height: 2;
+            text-align: justify;
+            color: #ede0c8;
+        }
+
+        b {
+            color: #daa520;
+        }
+
+        .architecture-note {
+            background: rgba(0, 206, 209, 0.05);
+            border-left: 5px solid #00ced1;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #daa520;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="registan-frame">
+    <h1>YALANGTO'SH BAHODIR</h1>
+    <div class="symbol">☼</div>
+
+    <p>
+        <b>Yalangto‘shbiy Bahodir</b> (1576–1656) — buyuk sarkarda, davlat arbobi va Samarqandning uzoq yillik hokimi. O‘zbek urug‘laridan bo‘lgan olchin qabilasiga mansub bu siymo, Buxoro xonligining eng nufuzli shaxslaridan biri bo‘lgan. U nafaqat jang maydonlarida "Bahodir" unvonini olgan qahramon, balki Samarqandni jahon madaniyati va me’morchiligi markaziga aylantirgan ulkan bunyodkordir.
+    </p>
+
+    <div class="architecture-note">
+        "U Registon maydonida Sherdor va Tillakori madrasalarini barpo etib, Temuriylar an’analarini qayta jonlantirdi."
+    </div>
+
+    <h2>Registonning Me’mori va Homiyi</h2>
+    <p>
+        Yalangto‘sh Bahodirning tarix oldidagi eng buyuk xizmati — Registon maydonining hozirgi qiyofasini yaratganidir. 1619–1636-yillarda u Mirzo Ulug‘bek madrasasi qarshisida muhtasham <b>Sherdor madrasasini</b> qurdirdi. Oradan o‘n yil o‘tib, maydonning shimoliy qismida <b>Tillakori madrasasi</b> va masjidini barpo etdi. Bu obidalar o‘zining bezagi, tilla hallari va Sherdor peshtog‘idagi afsonaviy quyosh ko‘targan sher tasviri bilan dunyoni hayratga solib kelmoqda.
+    </p>
+
+    <h2>Sarkarda va Strateg</h2>
+    <p>
+        U o‘z davrining eng kuchli harbiy yo‘lboshchilaridan biri edi. Yalangto‘sh Bahodir Buxoro xonligi qo‘shinlarining bosh qo‘mondoni sifatida ko‘plab xalqaro urushlarda g‘alaba qozongan. Uning harbiy mahorati va strategik tafakkuri tufayli xonlik chegaralari mustahkamlandi. Ayniqsa, Eron va qozoq sultonlari bilan bo‘lgan murakkab munosabatlarda u ham qat’iyatli sarkarda, ham aqlli diplomat sifatida namoyon bo‘ldi.
+    </p>
+
+    <h2>Ma’naviyat va Ilm-fan</h2>
+    <p>
+        Bahodir Yalangto‘sh faqat imoratlar qurish bilan cheklanib qolmadi. U o‘z davrining ma’rifatli insoni sifatida ilm-fan ahlini qo‘llab-quvvatladi. U barpo etgan madrasalar asrlar davomida minglab talabalarga bilim bergan yirik ma’rifat o‘choqlari bo‘lib xizmat qildi. Uning sa’y-harakatlari natijasida Samarqand yana ilm, san’at va hunarmandchilik shahri sifatida gullab-yashnadi.
+    </p>
+
+    <p>
+        Yalangto‘sh Bahodir 1656-yilda vafot etdi va o‘zi qurdigan Tillakori madrasasiga dafn etildi. Bugun Registon maydoniga qadam qo‘ygan har bir sayyoh bu buyuk insonning irodasi va didini his qiladi. U qoldirgan meros o‘zbek xalqining bunyodkorlik qudratining boqiy timsolidir.
+    </p>
+
+    <footer>SAMARQAND HOKIMLIGI — 2026</footer>
+</div>
+
+</body>
+</html>

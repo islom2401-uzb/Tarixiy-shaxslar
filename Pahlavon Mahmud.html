@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pahlavon Mahmud | Xiva Qahramoni</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Raleway:wght@200;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Raleway', sans-serif;
+            background: #050505;
+            color: #d4d4d8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun turkuaz jilo va xalqaro naqshlar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(20, 184, 166, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-container {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 3px;
+            background: linear-gradient(135deg, #14b8a6, #0d9488, #5b21b6, #14b8a6);
+            background-size: 300% 300%;
+            animation: flowBG 12s linear infinite;
+            border-radius: 60px 0 60px 0;
+            box-shadow: 0 0 80px rgba(20, 184, 166, 0.2);
+        }
+
+        @keyframes flowBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-box {
+            background: rgba(4, 7, 12, 0.98);
+            border-radius: 57px 0 57px 0;
+            padding: 85px;
+            text-align: center;
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* H1 - 7 soniyali kinematik nurli surilish */
+        h1 {
+            font-size: 4.8rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #0d9488 20%, #fff 40%, #fff 60%, #0d9488 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: titleSweep 7s ease-in-out infinite;
+            letter-spacing: -2px;
+        }
+
+        @keyframes titleSweep {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik Kuch va Ruh Belgisi (Tasavvufiy Halqa) */
+        .strength-symbol {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ring-outer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #14b8a6;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: rotateRing 4s linear infinite;
+        }
+
+        .ring-inner {
+            width: 50px;
+            height: 50px;
+            background: #14b8a6;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Romat shakli - jismoniy kuch */
+            box-shadow: 0 0 30px #14b8a6;
+            animation: pulseInner 2s ease-in-out infinite;
+        }
+
+        @keyframes rotateRing {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseInner {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(20, 184, 166, 0.2);
+            transition: 0.4s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-12px);
+            border-color: #14b8a6;
+            background: rgba(20, 184, 166, 0.05);
+        }
+
+        .stat-card span {
+            display: block;
+            font-size: 0.7rem;
+            color: #14b8a6;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            font-size: 1.15rem;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: #14b8a6;
+            margin: 60px 0 30px;
+            text-align: left;
+            border-left: 10px solid #5b21b6;
+            padding-left: 25px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .text-content {
+            font-size: 1.35rem;
+            line-height: 2.4;
+            color: #a1a1aa;
+            text-align: justify;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+
+        .rubai-box {
+            background: linear-gradient(90deg, rgba(20, 184, 166, 0.08), transparent);
+            padding: 40px;
+            border-radius: 20px;
+            border-right: 4px solid #14b8a6;
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #e2e8f0;
+            line-height: 2;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #14b8a6, #5b21b6, #14b8a6, transparent);
+            margin: 60px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="inner-box">
+        <h1>Pahlavon Mahmud</h1>
+        
+        <div class="strength-symbol">
+            <div class="ring-outer"></div>
+            <div class="ring-inner"></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card"><span>Taxallusi</span>Piryorvaliy</div>
+            <div class="stat-card"><span>Tavalludi</span>1247-yil, Xiva</div>
+            <div class="stat-card"><span>Vafoti</span>1326-yil, Xiva</div>
+        </div>
+
+        <p class="text-content">
+            Xorazm zaminining buyuk farzandi, yengilmas kurashchi va orif shoir <strong>Pahlavon Mahmud</strong> 1247-yilda Xivada tavallud topgan. U hayoti davomida jismoniy tarbiya bilan birga ma'naviy kamolotni uyg'unlashtirgan noyob shaxsdir. Oddiy po'stindo'zlik (terini qayta ishlash) bilan shug'ullangan bo'lsa-da, u butun Sharq dunyosida mardlik, saxovat va olijanoblik timsoli sifatida tanilgan. Pahlavon Mahmud Hindistondan Erongacha bo'lgan barcha kurash maydonlarida g'olib bo'lgan, ammo uning haqiqiy buyukligi mag'lub bo'lmasligida emas, balki raqibining hurmatini joyiga qo'yishida bo'lgan.
+        </p>
+
+        <div class="rubai-box">
+            "Yuz silsila bo'lsa ham oyog'imda mening,<br>
+            Ming g'am yuki tursa hamki bog'imda mening.<br>
+            Mardlarni qul etmak emasdir aslo hunar,<br>
+            Nomardni qul etsa bo'lur chog'imda mening."
+        </div>
+
+        <h2>Tasavvuf va Ijod: Ruboiylar Sultoni</h2>
+        <p class="text-content">
+            Pahlavon Mahmud o'z davrining mashhur shoiri ham bo'lib, fors va turkiy tillarda ijod qilgan. Uning ruboiylari falsafiy chuqurligi va insoniy dardni ifodalashi bilan Umar Xayyom ijodiga qiyoslanadi. U o'z she'rlarida kibrni qoralaydi, kamtarlik va samimiyatni ulug'laydi. Tasavvuf ta'limotida u mardlik va fuvuvvat (yigitlik) harakatining peshvosi sifatida ko'rilgan. Uning "Kanzul-haqoyiq" (Haqiqatlar xazinasi) asari ma'naviy poklanish va ilohiy ishq haqidagi nodir manbalardan biridir.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Mangu Maskan va Xalq E'tirofi</h2>
+        <p class="text-content">
+            1326-yilda vafot etgan Pahlavon Mahmudning qabri va uning atrofida bunyod etilgan maqbara majmuasi bugungi kunda Xivaning eng muqaddas maskanlaridan biri hisoblanadi. Maqbara devorlariga uning hikmatli ruboiylari naqsh qilingan bo'lib, u kishining o'lmas ruhi har bir ziyoratchiga kuch va orom bag'ishlaydi. Pahlavon Mahmud nafaqat o'tmish qahramoni, balki har bir o'zbek yigiti uchun mardlik, iroda va ma'naviy yuksaklikning tirik namunasidir. Allomaning xotirasi asrlar osha yashab, milliy g'ururimizning poydevori bo'lib xizmat qilmoqda.
+        </p>
+
+        <p style="text-align: center; color: #14b8a6; font-weight: 900; font-size: 1.5rem; letter-spacing: 5px; margin-top: 50px;">
+            MARDLAR PIRI — HIYVAT MAYOQI
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

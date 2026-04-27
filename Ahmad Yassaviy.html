@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Yassaviy | Hikmatlar Sultoni</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Lora:ital,wght@0,400;1,500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Lora', serif;
+            background: radial-gradient(circle at center, #1a0f00 0%, #050300 100%);
+            color: #f3e5ab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fon uchun tasavvufiy aura va tilla rangli zarrachalar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(139, 69, 19, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 1050px;
+            padding: 2px;
+            background: linear-gradient(135deg, #d4af37, #8b4513, #1a0f00, #d4af37);
+            background-size: 300% 300%;
+            animation: auraMove 15s linear infinite;
+            border-radius: 100px 10px;
+            box-shadow: 0 0 100px rgba(212, 175, 55, 0.15);
+        }
+
+        @keyframes auraMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .inner-content {
+            background: rgba(10, 5, 0, 0.98);
+            border-radius: 98px 8px;
+            padding: 85px;
+            text-align: center;
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(212, 175, 55, 0.05);
+        }
+
+        /* H1 - 7 soniyali kinematik tilla yaltirash */
+        h1 {
+            font-size: 4.8rem;
+            font-family: 'Cinzel Decorative', cursive;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #1a0f00 20%, #f3e5ab 40%, #ffffff 50%, #f3e5ab 60%, #1a0f00 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: goldenShine 7s ease-in-out infinite;
+            letter-spacing: -2px;
+        }
+
+        @keyframes goldenShine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dinamik Tasavvufiy Simvol */
+        .mystic-symbol {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d4af37;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulseCircle 4s infinite;
+        }
+
+        .inner-light {
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border-radius: 50%;
+            box-shadow: 0 0 40px #d4af37, 0 0 80px #d4af37;
+            animation: breathe 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseCircle {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.2); filter: brightness(1.5); }
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .data-card {
+            background: rgba(212, 175, 55, 0.02);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+        }
+
+        .data-card:hover {
+            transform: translateY(-15px);
+            border-color: #f3e5ab;
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .data-card span {
+            display: block;
+            font-size: 0.7rem;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .data-card p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #d4af37;
+            text-align: left;
+            margin: 60px 0 30px;
+            border-left: 5px solid #8b4513;
+            padding-left: 20px;
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        .body-text {
+            font-size: 1.3rem;
+            line-height: 2.3;
+            color: #dcdcdc;
+            text-align: justify;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .wisdom-quote {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), transparent);
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 2px solid #d4af37;
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #f3e5ab;
+            line-height: 2;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, #8b4513, #d4af37, transparent);
+            margin: 60px 0;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="inner-content">
+        <h1>Ahmad Yassaviy</h1>
+
+        <div class="mystic-symbol">
+            <div class="outer-glow"></div>
+            <div class="inner-light"></div>
+        </div>
+
+        <div class="data-grid">
+            <div class="data-card"><span>Tavalludi</span>1066-yil, Sayram</div>
+            <div class="data-card"><span>Vafoti</span>1166-yil, Turkiston</div>
+            <div class="data-card"><span>Asari</span>Devoni Hikmat</div>
+        </div>
+
+        <p class="body-text">
+            Turkiy dunyoning ma’naviy ustuni, tasavvuf ilmining buyuk murshidi <strong>Xoja Ahmad Yassaviy</strong> 1066-yilda Sayramda tug‘ilgan. U kishi turkiy xalqlarni islom dinining ma’rifati va insonparvarlik g‘oyalari atrofida birlashtirgan ulug‘ siymodir. Yassaviy Turkiston shahrini ilohiy ishq va ma’naviy poklanish markaziga aylantirdi. Uning ta’limoti — <strong>Yassaviylik</strong> tariqati — nafaqat O‘rta Osiyo, balki Kichik Osiyo va Bolqon yarim orollarigacha yetib borib, turkiy xalqlarning ma’naviy dunyoqarashini shakllantirdi.
+        </p>
+
+        <div class="wisdom-quote">
+            "Bismilloh deb bayon aylay hikmat aytib,<br>
+            Toliblarg‘a duru gavhar sochdim mano..."
+        </div>
+
+        <h2>Hikmatlar: Qalbga Yo'l</h2>
+        <p class="body-text">
+            Allomaning <strong>"Devoni Hikmat"</strong> asari turkiy tildagi eng qadimiy va eng nufuzli diniy-falsafiy asarlardan biridir. Yassaviy murakkab tasavvufiy tushunchalarni xalq tili va she’riyati vositasida sodda va samimiy bayon qilgan. Uning hikmatlarida nafsni tiyish, kamtarlik, yetim-yesirlarga g‘amxo‘rlik qilish va chinakam insoniylik fazilatlari ulug‘lanadi. Rivoyatlarga ko‘ra, u kishi Payg‘ambarimiz (s.a.v.) yoshiga yetganlarida (63 yosh), dunyo lazzatlaridan voz kechib, yer osti hujrasida ("chilla") yashab, qolgan umrini ibodat va hikmatlar yozishga bag‘ishlagan.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Mangu Ma'vo va Tarixiy E'tirof</h2>
+        <p class="body-text">
+            Ahmad Yassaviy 1166-yilda vafot etgan va Turkistonda dafn qilingan. Oradan ikki asr o‘tib, buyuk Amir Temur hazrat Yassaviyga bo‘lgan cheksiz ehtirom ramzi sifatida uning qabri ustiga muhtasham maqbara bunyod ettirdi. Bu maqbara bugungi kunda butun islom dunyosining muqaddas ziyoratgohlaridan biri va me’moriy durdonadir. Yassaviy merosi — mardlik, halollik va ma’naviy hurriyat merosidir. U kishining nomi "Piri Turkiston" sifatida asrlar davomida xalqimiz qalbida yashab, ma’naviy yo‘limizni yoritishda davom etmoqda.
+        </p>
+
+        <p style="text-align: center; color: #d4af37; font-weight: 700; font-size: 1.4rem; letter-spacing: 5px; margin-top: 50px;">
+            MA’NAVIYAT CHIROG‘I — TURKISTON SULTONI
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

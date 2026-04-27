@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. ASOSIY FON: Lojuvard va Tungi osmon */
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at center, #0a192f 0%, #020617 100%);
+            color: #cbd5e1;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 2. FONDA ASTA-SEKIN TOVLANUVCHI NUR */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        /* 3. WIKIPEDIA QOLIPI (KONTEYNERSIZ OCHIQLIK) */
+        .manuscript-layout {
+            max-width: 900px;
+            margin: 60px 20px;
+            padding: 40px;
+            border-top: 3px solid #38bdf8; /* Lojuvard chiziq */
+            border-bottom: 3px solid #38bdf8;
+            animation: fadeInPage 2s ease-in;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* 4. SARLAVHA: KUMUSH VA KO'K JILO */
+        h1 {
+            font-size: 4.5rem;
+            text-align: center;
+            margin: 0;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #94a3b8, #38bdf8, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .divider {
+            text-align: center;
+            color: #38bdf8;
+            font-size: 1.5rem;
+            margin: 20px 0 50px 0;
+            letter-spacing: 20px;
+        }
+
+        /* 5. MATN TUZILISHI */
+        h2 {
+            color: #38bdf8;
+            font-size: 2rem;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            padding-bottom: 10px;
+            margin-top: 60px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 2.1;
+            text-align: justify;
+            color: #94a3b8;
+        }
+
+        b {
+            color: #f1f5f9;
+            font-weight: bold;
+            border-bottom: 1px solid #38bdf8;
+        }
+
+        /* 6. IKKI USTUNLI FAKT BLOKI */
+        .info-columns {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(56, 189, 248, 0.05);
+            border-radius: 10px;
+        }
+
+        .column {
+            flex: 1;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #38bdf8;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            color: #334155;
+            letter-spacing: 10px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="manuscript-layout">
+    <h1>SHOHRUX MIRZO</h1>
+    <div class="divider">━━ ◆ ━━</div>
+
+    <p>
+        <b>Shohrux Mirzo</b> (1377–1447) — Temuriylar sulolasining buyuk vakili, Sohibqiron Amir Temurning kenja o‘g‘li va Hirot taxtining eng qudratli hukmdori. U otasidan qolgan ulkan saltanatni birlashtirib, uni ma’rifat va madaniyat o‘chog‘iga aylantirgan. Uning davrida Temuriylar renessansi o‘zining eng yuksak cho‘qqisiga chiqa boshladi.
+    </p>
+
+    <div class="info-columns">
+        <div class="column">Tinchlikparvar Siyosat</div>
+        <div class="column">Hirot Uyg'onish Davri</div>
+    </div>
+
+    <h2>Davlat Boshqaruvi</h2>
+    <p>
+        Amir Temur vafotidan so'ng boshlangan parokandalikka chek qo'ygan <b>Shohrux Mirzo</b>, poytaxtni Samarqanddan Hirotga ko‘chirdi. Uning 40 yillik hukmronligi davomida Markaziy Osiyo va Xuroson tinchlik, barqarorlik va iqtisodiy yuksalish davrini boshdan kechirdi. U nafaqat mohir sarkarda, balki adolatli va vazmin siyosatchi sifatida qo‘shni davlatlar bilan diplomatik aloqalarni mustahkamlagan.
+    </p>
+
+    <h2>Ma'rifat Homiysi</h2>
+    <p>
+        Sulton Shohrux ilm-fanga juda qiziqqan va o'zi ham yuksak ma'rifatli inson bo'lgan. Uning davrida Hirotda yuzlab olimlar, shoirlar va me'morlar to'plandi. Dunyoga mashhur <b>Gavharshod begim</b> madrasasi va masjidi aynan uning davrida qurilgan. Shohrux Mirzo o‘z o‘g‘li <b>Mirzo Ulug‘bek</b>ni Samarqand hokimi etib tayinlab, ilm-fanning rivojlanishiga keng sharoit yaratib berdi.
+    </p>
+
+    <h2>Tarixiy Meros</h2>
+    <p>
+        Shohrux Mirzo davri tarixda "Tinchlik va bunyodkorlik asri" deb nomlanadi. U barpo etgan kutubxonalar va madrasalar keyinchalik Navoiy va Behzod kabi daholarning yetishib chiqishiga poydevor bo'ldi. U qoldirgan eng buyuk meros — bu kuchli armiya bilan emas, balki yuksak madaniyat va adolatli boshqaruv bilan imperiyani uzoq vaqt saqlab qolish mumkinligini isbotlaganidir.
+    </p>
+
+    <footer>HIROT SALTANATI — 2026</footer>
+</div>
+
+</body>
+</html>
